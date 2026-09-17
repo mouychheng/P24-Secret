@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P24 Secret - Official Premium Skincare & Beauty</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts: Kantumruy Pro & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#FDFBF7',
+                            100: '#F4EBE1',
+                            200: '#E6D5C3',
+                            300: '#D7C4B7',
+                            400: '#C5A059',
+                            500: '#8B5E34',
+                            600: '#6F4E37',
+                            700: '#5C3A21',
+                            800: '#4A3B32',
+                            900: '#2D221C',
+                        }
+                    },
+                    fontFamily: {
+                        khmer: ['Kantumruy Pro', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Kantumruy Pro', sans-serif;
+            background-color: #FDFBF7;
+            color: #4A3B32;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Typewriter Animation Effect */
+        .typewriter-text {
+            overflow: hidden;
+            border-right: 2px solid #8B5E34;
+            white-space: nowrap;
+            display: inline-block;
+            animation: typing 3.5s steps(30, end) infinite alternate, blink .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            0% { width: 0 }
+            80%, 100% { width: 100% }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #8B5E34 }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4EBE1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5A059;
+            border-radius: 4px;
+        }
+
+        /* Modal Backdrop Blur */
+        .modal-backdrop {
+            background-color: rgba(45, 34, 28, 0.65);
+            backdrop-filter: blur(6px);
+        }
+    </style>
+</head>
+<body class="bg-brand-50 text-brand-800 antialiased">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-brand-50/90 backdrop-blur-md border-b border-brand-200/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white font-serif text-xl font-bold shadow-md group-hover:scale-105 transition transform">
+                    P24
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-wider text-brand-800 block leading-none">P24 SECRET</span>
+                    <span class="text-[10px] text-brand-500 uppercase tracking-widest font-semibold block mt-1">Luxury Beauty & Skincare</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-700">
+                <a href="#hero" class="hover:text-brand-400 transition">ទំព័រដើម</a>
+                <a href="#about" class="hover:text-brand-400 transition">អំពីប្រេន</a>
+                <a href="#products" class="hover:text-brand-400 transition">ផលិតផលទាំង ១៥</a>
+                <a href="#quality" class="hover:text-brand-400 transition">គុណតម្លៃស្ដង់ដារ</a>
+                <a href="#contact" class="hover:text-brand-400 transition">ទំនាក់ទំនង</a>
+            </nav>
+
+            <!-- Official Badge -->
+            <div class="hidden sm:flex items-center space-x-2 bg-brand-100 border border-brand-300 text-brand-700 px-4 py-1.5 rounded-full text-xs font-semibold shadow-sm">
+                <i class="fa-solid fa-certificate text-brand-400"></i>
+                <span>ប្រេនផ្លូវការ ១០០%</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Side-by-Side with Typing Effect) -->
+    <section id="hero" class="relative min-h-[calc(100vh-5rem)] flex items-center justify-center bg-gradient-to-b from-brand-100/60 via-brand-50 to-brand-50 px-4 sm:px-6 lg:px-8 py-12 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Side: Owner / Brand Highlight Image -->
+            <div class="lg:col-span-5 flex justify-center" data-aos="fade-right" data-aos-duration="1000">
+                <div class="relative group">
+                    <!-- Decorative Background Ring -->
+                    <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-brand-400 to-brand-200 opacity-40 blur-xl group-hover:opacity-60 transition duration-500"></div>
+                    
+                    <div class="relative w-72 h-80 sm:w-80 sm:h-96 md:w-[380px] md:h-[460px] rounded-2xl overflow-hidden border-2 border-brand-200 shadow-2xl bg-white">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="P24 Secret Owner" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-900/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 inset-x-6 text-white">
+                            <span class="inline-block px-3 py-1 bg-brand-400/80 backdrop-blur-md text-xs font-semibold rounded-full mb-2">ម្ចាស់ប្រេនផ្ទាល់</span>
+                            <h3 class="text-xl font-bold font-serif tracking-wide">P24 Secret Founder</h3>
+                            <p class="text-xs text-brand-100 font-light mt-1">ស្ថាបនិក និងអ្នកជំនាញថែរក្សាសម្រស់</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Content & Typewriter Animation -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left" data-aos="fade-left" data-aos-duration="1000">
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-brand-200/50 border border-brand-300 text-brand-700 text-xs font-semibold tracking-wider">
+                    <i class="fa-solid fa-crown text-brand-400"></i>
+                    <span>PREMIUM BEAUTY & SKINCARE COLLECTION</span>
+                </div>
+
+                <!-- Animated Brand Title -->
+                <div class="space-y-2">
+                    <p class="text-brand-500 font-medium text-lg">សូមស្វាគមន៍មកកាន់ពិភពសម្រស់</p>
+                    <div class="block">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-brand-900 leading-tight">
+                            <span class="typewriter-text text-brand-600">P24 Secret</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <p class="text-base sm:text-lg text-brand-700 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                    រូបមន្តសម្ងាត់នៃការថែរក្សាស្បែកឱ្យមានសុខភាពល្អ ភ្លឺថ្លាចែងចាំង និងក្មេងជាងវ័យ។ ផលិតផលគ្រប់មុខត្រូវបានឆ្លងកាត់ការពិសោធន៍ និងទទួលស្គាល់គុណភាពយ៉ាងត្រឹមត្រូវ ដើម្បីផ្តល់ទំនុកចិត្តខ្ពស់បំផុតជូនអតិថិជន។
+                </p>
+
+                <!-- Key Highlights -->
+                <div class="grid grid-cols-3 gap-4 pt-4 max-w-lg mx-auto lg:mx-0 border-t border-brand-200">
+                    <div class="text-center lg:text-left">
+                        <span class="text-2xl font-bold font-serif text-brand-600 block">១៥+</span>
+                        <span class="text-xs text-brand-800">ផលិតផលស្តង់ដារ</span>
+                    </div>
+                    <div class="text-center lg:text-left">
+                        <span class="text-2xl font-bold font-serif text-brand-600 block">១០០%</span>
+                        <span class="text-xs text-brand-800">សុវត្ថិភាពស្បែក</span>
+                    </div>
+                    <div class="text-center lg:text-left">
+                        <span class="text-2xl font-bold font-serif text-brand-600 block">៥★</span>
+                        <span class="text-xs text-brand-800">ការពេញចិត្តខ្ពស់</span>
+                    </div>
+                </div>
+
+                <div class="pt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="#products" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-brand-600 text-white font-medium hover:bg-brand-700 shadow-lg shadow-brand-600/20 transition transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
+                        <span>ទស្សនាផលិតផលទាំង ១៥</span>
+                        <i class="fa-solid fa-arrow-down text-sm"></i>
+                    </a>
+                    <a href="#quality" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-brand-700 font-medium border border-brand-300 hover:bg-brand-100 transition flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-shield-halved text-brand-400"></i>
+                        <span>ស្តង់ដារគុណភាព</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Brand Philosophy Section -->
+    <section id="about" class="py-16 bg-white border-y border-brand-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200/80 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 text-2xl">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-900 mb-2">ធាតុផ្សំធម្មជាតិ</h3>
+                    <p class="text-sm text-brand-700 leading-relaxed">សម្រាំងចេញពីសារធាតុចាញ់ធម្មជាតិ និងវីតាមីនសំខាន់ៗដែលចិញ្ចឹមស្បែកជំរៅជ្រៅ។</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200/80 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 text-2xl">
+                        <i class="fa-solid fa-vial-circle-check"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-900 mb-2">ពិសោធន៍ត្រឹមត្រូវ</h3>
+                    <p class="text-sm text-brand-700 leading-relaxed">ឆ្លងកាត់ការត្រួតពិនិត្យ និងពិសោធន៍សុវត្ថិភាពស្បែក មិនបង្កឱ្យរលាក ឬប្រតិកម្ម។</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-brand-50 border border-brand-200/80 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 text-2xl">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-900 mb-2">ទំនុកចិត្តផ្លូវការ</h3>
+                    <p class="text-sm text-brand-700 leading-relaxed">ទទួលបានការគាំទ្រ និងការវាយតម្លៃលំដាប់ផ្កាយ ៥ ពីអតិថិជនប្រើប្រាស់ពិតប្រាកដ។</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Showcase Section (15 Total Products) -->
+    <section id="products" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-500 bg-brand-100 px-3.5 py-1.5 rounded-full border border-brand-200">Official Collection</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-900 mt-3 mb-4">ផលិតផលទាំង ១៥ របស់ P24 Secret</h2>
+            <p class="text-brand-700 text-sm sm:text-base font-light">
+                ចុចលើរូបភាព ឬប៊ូតុងរបស់ផលិតផលនីមួយៗ ដើម្បីមើលការរៀបរាប់ពី **គុណភាព និងអត្ថប្រយោជន៍** យ៉ាងលម្អិត។
+            </p>
+            <div class="w-24 h-1 bg-gradient-to-r from-transparent via-brand-400 to-transparent mx-auto mt-4"></div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10" data-aos="fade-up">
+            <button onclick="filterProducts('all')" class="filter-btn active px-5 py-2 rounded-full text-xs font-semibold transition border border-brand-300 bg-brand-600 text-white shadow-sm">ទាំងអស់ (15)</button>
+            <button onclick="filterProducts('face')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold transition border border-brand-300 bg-white text-brand-700 hover:bg-brand-100">ថែរក្សាស្បែកមុខ</button>
+            <button onclick="filterProducts('body')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold transition border border-brand-300 bg-white text-brand-700 hover:bg-brand-100">ថែរក្សាដងខ្លួន</button>
+            <button onclick="filterProducts('special')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold transition border border-brand-300 bg-white text-brand-700 hover:bg-brand-100">ឈុតពិសេស VIP</button>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+            <!-- 15 Products will be rendered dynamically by JS -->
+        </div>
+    </section>
+
+    <!-- Detailed Product Quality Modal (Pop-up) -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-brand-200 transform transition-all my-8 max-h-[90vh] flex flex-col">
+            
+            <!-- Modal Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-brand-800 shadow-md flex items-center justify-center transition hover:scale-110">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Modal Content (Scrollable) -->
+            <div class="overflow-y-auto p-6 sm:p-8 space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Modal Product Image -->
+                    <div class="relative rounded-2xl overflow-hidden border border-brand-200 bg-brand-50 h-72 sm:h-80 shadow-inner">
+                        <img id="modal-img" src="" alt="Product Image" class="w-full h-full object-cover">
+                        <span id="modal-badge" class="absolute top-3 left-3 bg-brand-600 text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-md"></span>
+                    </div>
+
+                    <!-- Modal Product Details -->
+                    <div class="space-y-4">
+                        <div>
+                            <span class="text-xs font-bold text-brand-500 uppercase tracking-widest block mb-1">P24 SECRET QUALITY ASSURED</span>
+                            <h3 id="modal-title" class="text-2xl font-bold font-serif text-brand-900 leading-snug"></h3>
+                            <p id="modal-subtitle" class="text-xs text-brand-500 italic mt-1"></p>
+                        </div>
+
+                        <!-- Rating & Satisfaction -->
+                        <div class="flex items-center space-x-3 bg-brand-50 p-3 rounded-xl border border-brand-200">
+                            <div class="text-amber-500 text-sm flex space-x-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-brand-800">ការពេញចិត្ត៖ ៥.០ / ៥ (១០០%)</span>
+                        </div>
+
+                        <!-- Like & Favorite Interaction -->
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-xs font-medium text-brand-600"><i class="fa-solid fa-circle-check text-green-600 mr-1"></i> មានក្នុងស្តុកផ្លូវការ</span>
+                            <button id="modal-like-btn" class="flex items-center space-x-2 text-gray-400 hover:text-red-500 transition px-3.5 py-1.5 rounded-full border border-gray-200 text-xs font-semibold">
+                                <i class="fa-solid fa-heart"></i>
+                                <span id="modal-like-count">0</span> ចាប់អារម្មណ៍
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Quality & Description -->
+                <div class="border-t border-brand-200 pt-6 space-y-4">
+                    <div>
+                        <h4 class="font-bold text-brand-900 text-base mb-2 flex items-center">
+                            <i class="fa-solid fa-gem text-brand-400 mr-2"></i>
+                            គុណភាព និងអត្ថប្រយោជន៍ចម្បង
+                        </h4>
+                        <p id="modal-desc" class="text-sm text-brand-700 leading-relaxed font-light bg-brand-50/60 p-4 rounded-xl border border-brand-200/60"></p>
+                    </div>
+
+                    <!-- Key Ingredients -->
+                    <div>
+                        <h4 class="font-bold text-brand-900 text-base mb-2 flex items-center">
+                            <i class="fa-solid fa-flask text-brand-400 mr-2"></i>
+                            ធាតុផ្សំសំខាន់ៗ (Key Ingredients)
+                        </h4>
+                        <p id="modal-ingredients" class="text-sm text-brand-700 leading-relaxed font-light"></p>
+                    </div>
+
+                    <!-- Usage Instructions -->
+                    <div>
+                        <h4 class="font-bold text-brand-900 text-base mb-2 flex items-center">
+                            <i class="fa-solid fa-hand-holding-droplet text-brand-400 mr-2"></i>
+                            របៀបប្រើប្រាស់ដើម្បីទទួលបានប្រសិទ្ធភាពខ្ពស់
+                        </h4>
+                        <p id="modal-usage" class="text-sm text-brand-700 leading-relaxed font-light"></p>
+                    </div>
+                </div>
+
+                <!-- Footer note in Modal -->
+                <div class="bg-brand-100 p-4 rounded-xl text-center border border-brand-200">
+                    <p class="text-xs text-brand-800 font-medium">
+                        ✨ រាល់ផលិតផល P24 Secret ទាំងអស់ត្រូវបានធានាគុណភាពដើម ១០០% ចេញពីរោងចក្រផ្ទាល់។
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Quality Guarantee & Certificate Banner -->
+    <section id="quality" class="py-16 bg-gradient-to-r from-brand-800 via-brand-700 to-brand-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="w-16 h-16 rounded-full bg-brand-400/20 border border-brand-400 mx-auto flex items-center justify-center text-brand-400 text-2xl">
+                <i class="fa-solid fa-shield-cat"></i>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-serif font-bold">សេចក្តីទុកចិត្ត និងស្តង់ដារសុវត្ថិភាព P24 Secret</h2>
+            <p class="text-brand-100 text-sm max-w-2xl mx-auto font-light leading-relaxed">
+                យើងខ្ញុំប្តេជ្ញាផ្តល់ជូននូវផលិតផលដែលមានសុវត្ថិភាពខ្ពស់បំផុត គ្មានសារធាតុគីមីបំផ្លាញស្បែក និងផ្តល់លទ្ធផលពិតប្រាកដជូនដល់អតិថិជនគ្រប់រូប។
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-brand-900 text-brand-200 py-12 border-t border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Brand Info -->
+            <div class="space-y-3">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-brand-400 flex items-center justify-center text-white font-serif font-bold text-sm">
+                        P24
+                    </div>
+                    <span class="font-serif text-xl font-bold text-white">P24 SECRET</span>
+                </div>
+                <p class="text-xs text-brand-300 leading-relaxed font-light">
+                    ប្រេនថែរក្សាសម្រស់ និងស្បែកដែលទទួលបានទំនុកចិត្តខ្ពស់។ សម្រស់ធម្មជាតិ ទំនុកចិត្តពិតប្រាកដ។
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3 font-serif">តំណភ្ជាប់រហ័ស</h4>
+                <ul class="space-y-2 text-xs text-brand-300">
+                    <li><a href="#hero" class="hover:text-brand-400 transition">ទំព័រដើម</a></li>
+                    <li><a href="#products" class="hover:text-brand-400 transition">បញ្ជីផលិតផលទាំង ១៥</a></li>
+                    <li><a href="#quality" class="hover:text-brand-400 transition">ស្តង់ដារគុណភាព</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-2">
+                <h4 class="text-white font-bold text-sm mb-3 font-serif">ទំនាក់ទំនងផ្លូវការ</h4>
+                <p class="text-xs text-brand-300 flex items-center"><i class="fa-solid fa-phone mr-2 text-brand-400"></i> Hotline: 012 345 678 / 098 765 432</p>
+                <p class="text-xs text-brand-300 flex items-center"><i class="fa-solid fa-paper-plane mr-2 text-brand-400"></i> Telegram Official: @P24SecretOfficial</p>
+                <p class="text-xs text-brand-300 flex items-center"><i class="fa-solid fa-location-dot mr-2 text-brand-400"></i> រាជធានីភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-brand-800 text-center text-[11px] text-brand-400">
+            © 2026 P24 Secret Official. រក្សាសិទ្ធិគ្រប់យ៉ាង។
+        </div>
+    </footer>
+
+    <!-- AOS JS & Application Logic -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            once: true,
+            duration: 800
+        });
+
+        // Array of 15 Detailed Products
+        const productsData = [
+            {
+                id: 1,
+                name: "P24 Secret - Gold Luxury Facial Serum",
+                subtitle: "សេរ៉ូមមាសចិញ្ចឹមស្បែកមុខជ្រៅ",
+                category: "face",
+                badge: "Best Seller",
+                image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80",
+                likes: 342,
+                liked: false,
+                description: "សេរ៉ូមមាសចិញ្ចឹមស្បែកមុខរូបមន្តពិសេស P24 Secret ជួយដោះស្រាយបញ្ហាស្បែកស្រអាប់ ផ្តល់សំណើមជ្រៅ និងជួយឱ្យស្បែកមុខមានពន្លឺថ្លាចែងចាំងបែបធម្មជាតិ។ ជួយកាត់បន្ថយស្នាមអុចខ្មៅ និងពង្រឹងកោសិកាស្បែកឱ្យរឹងមាំ។",
+                ingredients: "សារធាតុចាញ់មាសសុទ្ធ 24K, Hyaluronic Acid, Collagen ធម្មជាតិ, និង Vitamin C & E។",
+                usage: "លាប ២-៣ ដក់លើផ្ទៃមុខជារៀងរាល់ព្រឹក និងយប់ បន្ទាប់ពីលាងសម្អាតមុខរួច។"
+            },
+            {
+                id: 2,
+                name: "P24 Secret - Whitening Day Cream SPF50+",
+                subtitle: "គ្រីមបំប៉ន និងការពារកម្ដៅថ្ងៃ",
+                category: "face",
+                badge: "Top Rated",
+                image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80",
+                likes: 289,
+                liked: false,
+                description: "គ្រីមលាបថ្ងៃដែលមានសារធាតុការពារកាំរស្មីយូវី SPF50+ PA++++ ជួយការពារស្បែកពីពន្លឺព្រះអាទិត្យ និងពន្លឺអេក្រង់ ទន្ទឹមនឹងការចិញ្ចឹមស្បែកឱ្យសថ្លា មិនកក មិនស្អិត និងមិនកកស្ទះរន្ធញើស។",
+                ingredients: "Titanium Dioxide, Niacinamide (Vitamin B3), និង សារធាតុចាញ់ផ្កា chamomile។",
+                usage: "លាបលើផ្ទៃមុខ និងក រៀងរាល់ព្រឹកមុនចេញក្រៅ ១៥ នាទី។"
+            },
+            {
+                id: 3,
+                name: "P24 Secret - Deep Repair Night Cream",
+                subtitle: "គ្រីមយប់ជួសជុលកោសិកាស្បែក",
+                category: "face",
+                badge: "Popular",
+                image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80",
+                likes: 215,
+                liked: false,
+                description: "គ្រីមយប់ជួយស្ដារ និងជួសជុលស្បែកដែលខូចខាតក្នុងពេលរាត្រី។ ជួយបន្តឹងស្បែកមុខ បំបាត់ស្នាមជ្រួញតូចៗ និងធ្វើឱ្យស្បែកទន់ល្មើយដូចស្បែកកូនក្មេងនៅពេលព្រឹកព្រលឹម។",
+                ingredients: "Peptides Complex, Shea Butter, Rosehip Oil, និង Ceramide។",
+                usage: "លាបម៉ massage ស្រាលៗលើផ្ទៃមុខមុនពេលចូលគេងជាប្រចាំ។"
+            },
+            {
+                id: 4,
+                name: "P24 Secret - Gentle Cleansing Foam",
+                subtitle: "ហ្វូមលាងមុខសម្អាតជ្រៅ និងទន់ភ្លន់",
+                category: "face",
+                badge: "Essential",
+                image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80",
+                likes: 198,
+                liked: false,
+                description: "ហ្វូមលាងមុខពពុះទន់ល្មើយ សម្អាតធូលីដី កាកសំណល់បាត់មុខ និងខ្លាញ់លើសបានយ៉ាងជ្រៅ ដោយមិនធ្វើឱ្យស្បែកស្ងួតតឹង។ រក្សាសំណើមធម្មជាតិ និងការពារការកើតមុន។",
+                ingredients: "Green Tea Extract, Salicylic Acid កម្រិតស្រាល, និង Glycerin ធម្មជាតិ។",
+                usage: "ប្រើប្រាស់លាងសម្អាតផ្ទៃមុខជារៀងរាល់ព្រឹក និងល្ងាច។"
+            },
+            {
+                id: 5,
+                name: "P24 Secret - Collagen Glowing Toner",
+                subtitle: "តូណឺខូឡាជេនបង្កើនសំណើម",
+                category: "face",
+                badge: "New Arrival",
+                image: "https://images.unsplash.com/photo-1608248597261-83de2d5d8c3f?auto=format&fit=crop&w=600&q=80",
+                likes: 176,
+                liked: false,
+                description: "ទឹកតូណឺជួយសម្រួលកម្រិត pH របស់ស្បែក បង្រួមរន្ធញើស និងត្រៀមស្បែកឱ្យស្រូបយកជែល និងសេរ៉ូមបានល្អបំផុត។ បន្ថែមខូឡាជេនធ្វើឱ្យស្បែករលោងតឹងណែន។",
+                ingredients: "Hydrolyzed Collagen, Centella Asiatica, និង Aloe Vera Pure Juice។",
+                usage: "ជូត ឬផ្តិតស្រាលៗលើផ្ទៃមុខបន្ទាប់ពីលាងមុខរួច។"
+            },
+            {
+                id: 6,
+                name: "P24 Secret - Miracle Body Lotion",
+                subtitle: "ឡូសិនចិញ្ចឹមស្បែកដងខ្លួនភ្លឺថ្លា",
+                category: "body",
+                badge: "Hot Item",
+                image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
+                likes: 410,
+                liked: false,
+                description: "ឡូសិនលាបដងខ្លួនក្លិនក្រអូបប្រណិតជាប់បានយូរ ជួយឱ្យស្បែកដងខ្លួនសរលោង មានសំណើម និងការពារស្បែកពីភាពស្ងួតប្រេះស្រកា។ សាច់ឡូសិនជ្រាបលឿន មិនស្អិត។",
+                ingredients: "Alpha Arbutin, Milk Protein, Vitamin B5, និង Jojoba Oil។",
+                usage: "លាបលើស្បែកដងខ្លួនបន្ទាប់ពីងូតទឹក រៀងរាល់ព្រឹក និងយប់។"
+            },
+            {
+                id: 7,
+                name: "P24 Secret - Organic Body Scrub",
+                subtitle: "ស្ក្រាប់ពន្លឿនកោសិកាស្បែកចាស់",
+                category: "body",
+                badge: "Organic",
+                image: "https://images.unsplash.com/photo-1567928269566-51f33f673322?auto=format&fit=crop&w=600&q=80",
+                likes: 165,
+                liked: false,
+                description: "ស្ក្រាប់ខាត់ស្បែកផ្សំចេញពីគ្រាប់ស្ក្រាប់ធម្មជាតិល្អិតៗ ជួយជម្រុះកោសិកាស្បែកចាស់ៗដែលស្រអាប់ចេញ ដោយមិនធ្វើឱ្យផ្សារស្បែក។ ជួយឱ្យស្បែកទន់រលោងភ្លាមៗ។",
+                ingredients: "គ្រាប់កាហ្វេអារ៉ាប៊ីកា, អំបិលសមុទ្រជម្រះ, ប្រេងដូងសុទ្ធ, និង ទឹកឃ្មុំ។",
+                usage: "ប្រើខាត់ស្បែក ២-៣ ដងក្នុងមួយសប្តាហ៍ ពេលងូតទឹក។"
+            },
+            {
+                id: 8,
+                name: "P24 Secret - Vitamin C Brightening Essence",
+                subtitle: "អេសិនវីតាមីនស៊ីបំបាត់ស្នាម",
+                category: "face",
+                badge: "Popular",
+                image: "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=600&q=80",
+                likes: 230,
+                liked: false,
+                description: "អេសិនស្ដើងស្រាលដែលសម្បូរទៅដោយវីតាមីនស៊ីកំហាប់ខ្ពស់ ជួយកាត់បន្ថយស្នាមជាំ ស្នាមមុន និងស្នាមអុចខ្មៅបានយ៉ាងឆាប់រហ័ស ព្រមទាំងបង្កើនពន្លឺស្បែក។",
+                ingredients: "Pure Vitamin C 15%, Ferulic Acid, និង Vitamin E។",
+                usage: "លាប ៣-៤ តក់លើផ្ទៃមុខជារៀងរាល់ព្រឹក។"
+            },
+            {
+                id: 9,
+                name: "P24 Secret - Botanical Eye Treatment Cream",
+                subtitle: "គ្រីមបំបាត់ស្នាមជ្រីវជ្រួញជុំវិញភ្នែក",
+                category: "face",
+                badge: "Special Care",
+                image: "https://images.unsplash.com/photo-1512290900676-26c2a48f4134?auto=format&fit=crop&w=600&q=80",
+                likes: 142,
+                liked: false,
+                description: "គ្រីមថែរក្សាស្បែកជុំវិញរង្វង់ភ្នែក ជួយកាត់បន្ថយរង្វង់ភ្នែកខ្មៅ ហើមភ្នែក និងស្នាមជ្រួញជើងក្អែក ធ្វើឱ្យភ្នែកមើលទៅមានភាពស្រស់ថ្លា និងយុវវ័យ។",
+                ingredients: "Caffeine Extract, Cucumber Water, និង Tri-Peptides Complex។",
+                usage: "លាបចុចៗស្រាលៗជុំវិញរង្វង់ភ្នែកជារៀងរាល់យប់។"
+            },
+            {
+                id: 10,
+                name: "P24 Secret - Hydrating Facial Mask Box",
+                subtitle: "ម៉ាសបន្ទះផ្តល់សំណើមជ្រៅ (៥ សន្លឹក)",
+                category: "special",
+                badge: "Best Value",
+                image: "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=600&q=80",
+                likes: 310,
+                liked: false,
+                description: "ម៉ាសបន្ទះសូត្រស្តើងស្អិតជាប់មុខបានល្អ ផ្តល់សេរ៉ូមសំណើមយ៉ាងច្រើនដល់ស្បែកមុខភ្លាមៗ។ សមស្របបំផុតសម្រាប់ស្បែកស្ងួត ឬស្បែកដែលត្រូវការការសម្រាក។",
+                ingredients: "Hyaluronic Acid 5-D, Rice Extract, និង Niacinamide។",
+                usage: "បិទលើផ្ទៃមុខរយៈពេល ១៥-២០ នាទី បន្ទាប់មកម៉massage សេរ៉ូមដែលសល់ឱ្យជ្រាបចូលស្បែក។"
+            },
+            {
+                id: 11,
+                name: "P24 Secret - UV Protection Sunscreen Silk",
+                subtitle: "ឡេការពារកម្ដៅថ្ងៃសាច់សូត្រ",
+                category: "face",
+                badge: "Must Have",
+                image: "https://images.unsplash.com/photo-1567928269566-51f33f673322?auto=format&fit=crop&w=600&q=80",
+                likes: 275,
+                liked: false,
+                description: "ឡេការពារកម្ដៅថ្ងៃសាច់សូត្រ មិនកក មិនស្អិត និងមិនបន្សល់ស្នាមស។ ជួយបិទបាំងរន្ធញើស និងធ្វើជា Make-up primer បានយ៉ាងល្អឥតខ្ចោះ។",
+                ingredients: "Zinc Oxide, Silk Protein, និង Thermal Spring Water។",
+                usage: "លាបលើផ្ទៃមុខមុនពេលលាបម្សៅ ឬមុនពេលចេញក្រៅ។"
+            },
+            {
+                id: 12,
+                name: "P24 Secret - Herbal Acne Care Lotion",
+                subtitle: "ល្បាយរុក្ខជាតិបំបាត់ និងពន្លត់មុន",
+                category: "face",
+                badge: "Acne Care",
+                image: "https://images.unsplash.com/photo-1608248597261-83de2d5d8c3f?auto=format&fit=crop&w=600&q=80",
+                likes: 188,
+                liked: false,
+                description: "សេរ៉ូមល្បាយរុក្ខជាតិពិសេសសម្រាប់ស្បែកមានបញ្ហាមុន ជួយពន្លត់មុនរលាក មុនខ្ទុះ នឹងកាត់បន្ថយបាក់តេរីបង្កមុនដោយមិនធ្វើឱ្យស្បែកក្រហមរលាក។",
+                ingredients: "Tea Tree Oil, Witch Hazel, និង Salicylic Acid 2%។",
+                usage: "លាបចុចលើកន្លែងដែលមានមុនរៀងរាល់ព្រឹក និងយប់។"
+            },
+            {
+                id: 13,
+                name: "P24 Secret - Rose Water Pore Minimizer",
+                subtitle: "ទឹកកុលាបបង្រួមរន្ធញើស និងបាញ់លាក់មុខ",
+                category: "face",
+                badge: "Refreshing",
+                image: "https://images.unsplash.com/photo-1512290900676-26c2a48f4134?auto=format&fit=crop&w=600&q=80",
+                likes: 154,
+                liked: false,
+                description: "ស្ព្រៃយ៍ទឹកកុលាបធម្មជាតិ សម្រាប់បាញ់ផ្តល់សំណើមបន្ទាន់ បង្រួមរន្ធញើស និងជួយឱ្យការតុបតែងមុខជាប់បានយូរពេញមួយថ្ងៃ។",
+                ingredients: "Organic Bulgarian Rose Water, Niacinamide, និង Glycerin។",
+                usage: "បាញ់លើផ្ទៃមុខនៅចម្ងាយ ២០cm ពេលណាក៏បានដែលត្រូវការភាពស្រស់ថ្លា។"
+            },
+            {
+                id: 14,
+                name: "P24 Secret - Firming & Anti-Aging Essence",
+                subtitle: "អេសិនពង្រឹងស្បែកតឹងណែនក្មេងជាងវ័យ",
+                category: "face",
+                badge: "Anti-Aging",
+                image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80",
+                likes: 202,
+                liked: false,
+                description: "រូបមន្តប្រឆាំងភាពចាស់នៃស្បែក ជួយពង្រឹងភាពយឺតនៃស្បែក ធ្វើឱ្យស្បែកតឹងណែន មិនយារធ្លាក់ និងកាត់បន្ថយស្នាមជ្រួញយ៉ាងមានប្រសិទ្ធភាព។",
+                ingredients: "EGF (Epidermal Growth Factor), Adenosine, និង Red Ginseng Extract។",
+                usage: "លាបលើផ្ទៃមុខ និងក រួចម៉massage ឡើងលើជារៀងរាល់ថ្ងៃ។"
+            },
+            {
+                id: 15,
+                name: "P24 Secret - Ultimate VIP Beauty Box Set",
+                subtitle: "ឈុតថែរក្សាសម្រស់ VIP សរុបប្រចាំប្រេន",
+                category: "special",
+                badge: "VIP Luxury",
+                image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
+                likes: 520,
+                liked: false,
+                description: "ឈុតប្រអប់កាដូប្រណិត VIP រួមបញ្ចូលនូវផលិតផលឆ្នើមៗ P24 Secret ទាំង ៥មុខ (Serum, Day Cream, Night Cream, Toner, និង Foam) សម្រាប់ថែរក្សាស្បែកគ្រប់ជ្រុងជ្រោយ។",
+                ingredients: "បណ្តុំសារធាតុចាញ់ប្រណិតៗទាំងអស់របស់ P24 Secret។",
+                usage: "ប្រើប្រាស់តាមលំដាប់លំដោយទម្លាប់ថែរក្សាស្បែកប្រចាំថ្ងៃ។"
+            }
+        ];
+
+        let activeCategory = 'all';
+
+        // Render Product Cards
+        function renderProducts() {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            const filtered = activeCategory === 'all' 
+                ? productsData 
+                : productsData.filter(p => p.category === activeCategory);
+
+            filtered.forEach(product => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl border border-brand-200/80 shadow-sm hover:shadow-xl transition duration-300 overflow-hidden flex flex-col group";
+                card.setAttribute('data-aos', 'fade-up');
+
+                card.innerHTML = `
+                    <div class="relative h-64 overflow-hidden bg-brand-50 cursor-pointer" onclick="openModal(${product.id})">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-brand-600/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            ${product.badge}
+                        </span>
+                        <div class="absolute inset-0 bg-brand-900/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="bg-white/90 text-brand-800 text-xs font-bold px-4 py-2 rounded-full shadow-lg transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                                <i class="fa-solid fa-eye mr-1 text-brand-500"></i> ចុចមើលគុណភាព
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+                        <div>
+                            <div class="flex items-center justify-between text-xs text-amber-500 mb-1">
+                                <div class="flex space-x-0.5">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="text-brand-500 font-semibold text-[11px]">P24 Verified</span>
+                            </div>
+                            <h3 class="font-bold text-brand-900 text-base leading-snug line-clamp-1 cursor-pointer hover:text-brand-500 transition" onclick="openModal(${product.id})">
+                                ${product.name}
+                            </h3>
+                            <p class="text-xs text-brand-500 italic mt-0.5">${product.subtitle}</p>
+                        </div>
+
+                        <div class="pt-3 border-t border-brand-100 flex items-center justify-between">
+                            <button onclick="openModal(${product.id})" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center transition">
+                                <span>ព័ត៌មានលម្អិត</span>
+                                <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i>
+                            </button>
+
+                            <button onclick="toggleCardLike(event, ${product.id})" class="like-btn-${product.id} flex items-center space-x-1.5 px-3 py-1 rounded-full border ${product.liked ? 'border-red-200 bg-red-50 text-red-500' : 'border-brand-200 text-brand-700 hover:text-red-500'} transition text-xs font-medium">
+                                <i class="fa-solid fa-heart ${product.liked ? 'text-red-500' : ''}"></i>
+                                <span>${product.likes}</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Functionality
+        function filterProducts(category) {
+            activeCategory = category;
+            
+            // Update button styles
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white');
+                btn.classList.add('bg-white', 'text-brand-700');
+            });
+
+            event.target.classList.remove('bg-white', 'text-brand-700');
+            event.target.classList.add('bg-brand-600', 'text-white');
+
+            renderProducts();
+        }
+
+        // Toggle Like on Card
+        function toggleCardLike(event, id) {
+            event.stopPropagation();
+            const product = productsData.find(p => p.id === id);
+            if (!product) return;
+
+            product.liked = !product.liked;
+            product.likes += product.liked ? 1 : -1;
+
+            renderProducts();
+        }
+
+        // Open Product Quality Modal
+        function openModal(id) {
+            const product = productsData.find(p => p.id === id);
+            if (!product) return;
+
+            document.getElementById('modal-img').src = product.image;
+            document.getElementById('modal-badge').innerText = product.badge;
+            document.getElementById('modal-title').innerText = product.name;
+            document.getElementById('modal-subtitle').innerText = product.subtitle;
+            document.getElementById('modal-desc').innerText = product.description;
+            document.getElementById('modal-ingredients').innerText = product.ingredients;
+            document.getElementById('modal-usage').innerText = product.usage;
+            
+            const likeBtn = document.getElementById('modal-like-btn');
+            const likeCount = document.getElementById('modal-like-count');
+            likeCount.innerText = product.likes;
+
+            if (product.liked) {
+                likeBtn.classList.add('text-red-500', 'border-red-200', 'bg-red-50');
+            } else {
+                likeBtn.classList.remove('text-red-500', 'border-red-200', 'bg-red-50');
+            }
+
+            likeBtn.onclick = function() {
+                product.liked = !product.liked;
+                product.likes += product.liked ? 1 : -1;
+                likeCount.innerText = product.likes;
+                
+                if (product.liked) {
+                    likeBtn.classList.add('text-red-500', 'border-red-200', 'bg-red-50');
+                } else {
+                    likeBtn.classList.remove('text-red-500', 'border-red-200', 'bg-red-50');
+                }
+                renderProducts();
+            };
+
+            const modal = document.getElementById('product-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close Modal
+        function closeModal() {
+            const modal = document.getElementById('product-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('product-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Initial Render
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+        });
+    </script>
+</body>
+</html>
