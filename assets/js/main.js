@@ -60,3 +60,118 @@ document.addEventListener('DOMContentLoaded', () => {
         renderProducts(productsData);
     }
 });
+
+// Typewriter Effect សម្រាប់ P24 Secrets
+function initTypewriter() {
+    const text = "P24 Secrets";
+    const speed = 150; // ល្បឿនសរសេរ ( millisecond )
+    let index = 0;
+    const element = document.getElementById("typewriter-title");
+
+    if (!element) return;
+
+    function type() {
+        if (index < text.length) {
+            element.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, speed);
+        }
+    }
+
+    type();
+}
+
+// ហៅ Function ឱ្យដំណើរការពេល Page Load
+document.addEventListener("DOMContentLoaded", () => {
+    initTypewriter();
+});
+
+// Typewriter ជារង្វិលជុំ (Type -> Pause -> Delete -> Repeat)
+function initLoopTypewriter() {
+    const words = ["P24 Secrets 🎀", "Beauty & Care ✨", "Skin Secrets 💖"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const element = document.getElementById("typewriter-title");
+
+    if (!element) return;
+
+    function typeEffect() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            element.innerText = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            element.innerText = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let speed = isDeleting ? 80 : 150;
+
+        // ពេលវាយចប់ពាក្យមួយ ឱ្យឈប់សម្រាក ២ វិនាទី
+        if (!isDeleting && charIndex === currentWord.length) {
+            speed = 2000;
+            isDeleting = true;
+        } 
+        // ពេលលុបអស់ ឱ្យប្តូរទៅពាក្យបន្ទាប់
+        else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            speed = 500;
+        }
+
+        setTimeout(typeEffect, speed);
+    }
+
+    typeEffect();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    initLoopTypewriter();
+});
+
+// Function លោតអក្សរជារង្វិលជុំ ( Warm Brown Theme )
+function initLoopTypewriter() {
+    const words = ["P24 Secrets", "Beauty & Care ✨", "Skin Secrets 💫"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const element = document.getElementById("typewriter-title");
+
+    if (!element) return;
+
+    function typeEffect() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            element.innerText = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            element.innerText = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let speed = isDeleting ? 80 : 150;
+
+        // ពេលវាយចប់ពាក្យមួយ ឱ្យឈប់សម្រាក ២ វិនាទី
+        if (!isDeleting && charIndex === currentWord.length) {
+            speed = 2000;
+            isDeleting = true;
+        } 
+        // ពេលលុបអស់ ឱ្យប្តូរទៅពាក្យបន្ទាប់
+        else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            speed = 500;
+        }
+
+        setTimeout(typeEffect, speed);
+    }
+
+    typeEffect();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    initLoopTypewriter();
+});

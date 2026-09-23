@@ -27,3 +27,42 @@ body {
     background: #C6A382;
     border-radius: 10px;
 }
+
+/* ==========================================
+   Animation សម្រាប់រត់អក្សរ TikTok & Styles បន្ថែម
+   ========================================== */
+
+/* 1. Animation អក្សររត់ */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 9s linear infinite;
+}
+
+/* ឈប់រត់ពេល Hover ចំ */
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+/* 2. ស្ទីលពណ៌អក្សរចំណងជើងបែប Luxury Gradient */
+.title-gradient {
+    background: linear-gradient(135deg, #6E4927 0%, #A97C50 50%, #E29578 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ស្ទីលពណ៌អក្សរ Warm Nude & Gold មិនមានពណ៌ផ្កាឈូក */
+.title-gradient {
+    background: linear-gradient(135deg, #4A321B 0%, #8C6036 50%, #C6A382 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
