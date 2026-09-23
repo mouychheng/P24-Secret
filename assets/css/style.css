@@ -3,8 +3,8 @@
 
 body {
     font-family: 'Kantumruy Pro', sans-serif;
-    background-color: #FBF8F3;
-    color: #4A3222;
+    background-color: #FAF6F0; /* ពណ៌ Cream/Warm Nude ស្រទន់ */
+    color: #4A3E3D;
 }
 
 .font-serif-title {
@@ -12,6 +12,18 @@ body {
 }
 
 .modal-backdrop {
-    background-color: rgba(42, 26, 16, 0.7);
-    backdrop-filter: blur(4px);
+    background-color: rgba(43, 33, 24, 0.6);
+    backdrop-filter: blur(6px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F3E9DC;
+}
+::-webkit-scrollbar-thumb {
+    background: #C6A382;
+    border-radius: 10px;
 }

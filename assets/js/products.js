@@ -1,17 +1,167 @@
+/**
+ * P24 Secrets - Products Data (16 Items Showcase)
+ * ផ្លូវរូបភាព៖ ត្រូវដាក់រូបភាពក្នុង assets/images/products/ (ឧទាហរណ៍៖ p1.jpg, p2.jpg, ...)
+ */
+
 const productsData = [
-    { id: 1, name: "P24 Secret - Gold Luxury Serum", subtitle: "សេរ៉ូមមាសចិញ្ចឹមស្បែកមុខជ្រៅ", badge: "Best Seller", image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80", description: "សេរ៉ូមមាសចិញ្ចឹមស្បែកមុខរូបមន្តពិសេស P24 Secret ជួយដោះស្រាយបញ្ហាស្បែកស្រអាប់ ផ្តល់សំណើមជ្រៅ និងជួយឱ្យស្បែកមុខមានពន្លឺថ្លាចែងចាំង។", ingredients: "សារធាតុចាញ់មាសសុទ្ធ 24K, Hyaluronic Acid, Collagen ធម្មជាតិ", usage: "លាប ២-៣ ដក់លើផ្ទៃមុខជារៀងរាល់ព្រឹក និងយប់" },
-    { id: 2, name: "P24 Secret - Whitening Day Cream SPF50+", subtitle: "គ្រីមបំប៉ន និងការពារកម្ដៅថ្ងៃ", badge: "Top Rated", image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80", description: "គ្រីមលាបថ្ងៃដែលមានសារធាតុការពារកាំរស្មីយូវី SPF50+ PA++++ ជួយការពារស្បែកពីពន្លឺព្រះអាទិត្យ និងពន្លឺអេក្រង់។", ingredients: "Titanium Dioxide, Niacinamide (Vitamin B3)", usage: "លាបលើផ្ទៃមុខ និងក រៀងរាល់ព្រឹកមុនចេញក្រៅ" },
-    { id: 3, name: "P24 Secret - Deep Repair Night Cream", subtitle: "គ្រីមយប់ជួសជុលកោសិកាស្បែក", badge: "Popular", image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80", description: "គ្រីមយប់ជួយស្ដារ និងជួសជុលស្បែកដែលខូចខាតក្នុងពេលរាត្រី។ ជួយបន្តឹងស្បែកមុខ និងបំបាត់ស្នាមជ្រួញ។", ingredients: "Peptides Complex, Shea Butter, Rosehip Oil", usage: "លាប និងម៉ស្សាស្រាលៗលើផ្ទៃមុខមុនពេលចូលគេង" },
-    { id: 4, name: "P24 Secret - Gentle Cleansing Foam", subtitle: "ហ្វូមលាងមុខសម្អាតជ្រៅ", badge: "Essential", image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80", description: "ហ្វូមលាងមុខពពុះទន់ល្មើយ សម្អាតធូលីដី និងខ្លាញ់លើសបានយ៉ាងជ្រៅ ដោយមិនធ្វើឱ្យស្បែកស្ងួត។", ingredients: "Green Tea Extract, Salicylic Acid, Glycerin", usage: "ប្រើប្រាស់លាងសម្អាតផ្ទៃមុខជារៀងរាល់ព្រឹក និងល្ងាច" },
-    { id: 5, name: "P24 Secret - Collagen Glowing Toner", subtitle: "តូណឺខូឡាជេនបង្កើនសំណើម", badge: "New Arrival", image: "https://images.unsplash.com/photo-1608248597261-83de2d5d8c3f?auto=format&fit=crop&w=600&q=80", description: "ទឹកតូណឺជួយសម្រួលកម្រិត pH របស់ស្បែក បង្រួមរន្ធញើស និងត្រៀមស្បែកឱ្យស្រូបយកសេរ៉ូមបានល្អ។", ingredients: "Hydrolyzed Collagen, Centella Asiatica, Aloe Vera", usage: "ជូត ឬផ្តិតស្រាលៗលើផ្ទៃមុខបន្ទាប់ពីលាងមុខរួច" },
-    { id: 6, name: "P24 Secret - Miracle Body Lotion", subtitle: "ឡូសិនចិញ្ចឹមស្បែកដងខ្លួន", badge: "Hot Item", image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80", description: "ឡូសិនលាបដងខ្លួនក្លិនក្រអូបប្រណិត ជួយឱ្យស្បែកដងខ្លួនសរលោង មានសំណើម និងការពារស្បែកស្ងួត។", ingredients: "Alpha Arbutin, Milk Protein, Vitamin B5", usage: "លាបលើស្បែកដងខ្លួនបន្ទាប់ពីងូតទឹក" },
-    { id: 7, name: "P24 Secret - Organic Body Scrub", subtitle: "ស្ក្រាប់ជម្រុះកោសិកាស្បែកចាស់", badge: "Organic", image: "https://images.unsplash.com/photo-1567928269566-51f33f673322?auto=format&fit=crop&w=600&q=80", description: "ស្ក្រាប់ខាត់ស្បែកផ្សំចេញពីគ្រាប់ស្ក្រាប់ធម្មជាតិ ជួយជម្រុះកោសិកាស្បែកចាស់ៗដែលស្រអាប់ចេញ។", ingredients: "គ្រាប់កាហ្វេអារ៉ាប៊ីកា, អំបិលសមុទ្រ, ប្រេងដូង", usage: "ប្រើខាត់ស្បែក ២-៣ ដងក្នុងមួយសប្តាហ៍ ពេលងូតទឹក" },
-    { id: 8, name: "P24 Secret - Vitamin C Essence", subtitle: "អេសិនវីតាមីនស៊ីបំបាត់ស្នាម", badge: "Popular", image: "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=600&q=80", description: "អេសិនស្ដើងស្រាលដែលសម្បូរទៅដោយវីតាមីនស៊ី ជួយកាត់បន្ថយស្នាមជាំ និងស្នាមអុចខ្មៅ។", ingredients: "Pure Vitamin C, Ferulic Acid, Vitamin E", usage: "លាប ៣-៤ តក់លើផ្ទៃមុខជារៀងរាល់ព្រឹក" },
-    { id: 9, name: "P24 Secret - Botanical Eye Cream", subtitle: "គ្រីមថែរក្សាស្បែកជុំវិញភ្នែក", badge: "Special Care", image: "https://images.unsplash.com/photo-1512290900676-26c2a48f4134?auto=format&fit=crop&w=600&q=80", description: "គ្រីមថែរក្សាស្បែកជុំវិញរង្វង់ភ្នែក ជួយកាត់បន្ថយរង្វង់ភ្នែកខ្មៅ និងស្នាមជ្រួញជើងក្អែក។", ingredients: "Caffeine Extract, Cucumber Water, Peptides", usage: "លាបចុចៗស្រាលៗជុំវិញរង្វង់ភ្នែកជារៀងរាល់យប់" },
-    { id: 10, name: "P24 Secret - Hydrating Mask Box", subtitle: "ម៉ាសបន្ទះផ្តល់សំណើមជ្រៅ", badge: "Best Value", image: "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=600&q=80", description: "ម៉ាសបន្ទះសូត្រស្តើង ផ្តល់សេរ៉ូមសំណើមយ៉ាងច្រើនដល់ស្បែកមុខភ្លាមៗ។", ingredients: "Hyaluronic Acid, Rice Extract, Niacinamide", usage: "បិទលើផ្ទៃមុខរយៈពេល ១៥-២០ នាទី" },
-    { id: 11, name: "P24 Secret - UV Sunscreen Silk", subtitle: "ឡេការពារកម្ដៅថ្ងៃសាច់សូត្រ", badge: "Must Have", image: "https://images.unsplash.com/photo-1567928269566-51f33f673322?auto=format&fit=crop&w=600&q=80", description: "ឡេការពារកម្តៅថ្ងៃសាច់សូត្រស្រាលស្រទន់ ការពារស្បែកបានយ៉ាងល្អ មិនកកស្ទះរន្ធញើស។", ingredients: "Zinc Oxide, Centella Asiatica, Vitamin E", usage: "លាបរៀងរាល់ព្រឹកមុនចេញក្រៅ" },
-    { id: 12, name: "P24 Secret - Lip Treatment Oil", subtitle: "ប្រេងចិញ្ចឹមបបូរមាត់ទន់រលោង", badge: "New", image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=600&q=80", description: "ប្រេងចិញ្ចឹមបបូរមាត់ជួយដោះស្រាយបញ្ហាបបូរមាត់ស្ងួតប្រេះ ឱ្យប្រែជាមានសំណើម និងពណ៌ស៊ីជម្ពូ។", ingredients: "Jojoba Oil, Argan Oil, Berry Extract", usage: "លាបលើបបូរមាត់បានគ្រប់ពេលវេលា" },
-    { id: 13, name: "P24 Secret - Whitening Body Shower", subtitle: "សាប៊ូងូតទឹកបំប៉នស្បែកសថ្លា", badge: "Top Pick", image: "https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=600&q=80", description: "សាប៊ូងូតទឹកពពុះទន់ភ្លន់ ជួយសម្អាតស្បែកយ៉ាងជ្រៅ ព្រមទាំងផ្តល់ជាតិសំណើម និងក្លិនក្រអូប។", ingredients: "Goat Milk, Glutathione, Vitamin B3", usage: "ប្រើប្រាស់ងូតសម្អាតរាងកាយជារៀងរាល់ថ្ងៃ" },
-    { id: 14, name: "P24 Secret - VIP Full Skincare Set", subtitle: "ឈុតថែរក្សាស្បែក VIP", badge: "VIP Set", image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80", description: "ឈុតថែរក្សាសម្រស់ពេញលេញ VIP រួមបញ្ចូលផលិតផលឆ្នើមៗសម្រាប់ថែទាំស្បែកមុខ និងដងខ្លួន។", ingredients: "24K Gold, Peptides, Natural Oils", usage: "ប្រើប្រាស់តាមលំដាប់លំដោយជារៀងរាល់ថ្ងៃ" },
-    { id: 15, name: "P24 Secret - Soothing Aloe Gel", subtitle: "ជែលផ្តល់សំណើម និងបន្ធូរស្បែក", badge: "Trending", image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80", description: "ជែលផ្តល់សំណើម និងបន្ធូរអារម្មណ៍ស្បែកដែលត្រូវកម្តៅថ្ងៃ ឬស្បែកប្រតិកម្ម ជួយឱ្យស្បែកត្រជាក់។", ingredients: "Organic Aloe Vera 99%, Cucumber Extract", usage: "លាបលើស្បែកមុខ ឬដងខ្លួនបានញឹកញាប់" }
+    {
+        id: 1,
+        name: "P24 Secrets - សេរ៉ូម",
+        subtitle: "សេរ៉ូមមាសចិញ្ចឹមស្បែកមុខជ្រៅ 🎀",
+        badge: "ផលិតផលលេខ ០១",
+        image: "assets/images/products/p1.jpg",
+        description: "រូបមន្តសម្ងាត់សេរ៉ូមមាស ផ្តល់សំណើមជ្រៅ និងជួយឱ្យស្បែកមុខមានពន្លឺថ្លាចែងចាំងបែបធម្មជាតិ។",
+        ingredients: "មាស ២៤K, អាស៊ីតហ៊ីយ៉ាលូរ៉ូនិច, កូឡាជែនធម្មជាតិ",
+        usage: "ប្រើ ២-៣ តក់ជារៀងរាល់ព្រឹក និងយប់"
+    },
+    {
+        id: 2,
+        name: "P24 Secrets - ឡេការពារកម្តៅថ្ងៃ UV",
+        subtitle: "គ្រីមបំប៉នការពារកម្តៅថ្ងៃ និង UV 🎀",
+        badge: "ផលិតផលលេខ ០២",
+        image: "assets/images/products/p2.jpg",
+        description: "គ្រីមលាបការពារស្បែកពីពន្លឺព្រះអាទិត្យ កាំរស្មី UV និងពន្លឺអេក្រង់ ជួយឱ្យស្បែកស្រស់ថ្លាពេញមួយថ្ងៃ។",
+        ingredients: "នីអាស៊ីណាម៉ាយ (Niacinamide), ទីតាញ៉ូម ឌីអុកស៊ីត (Titanium Dioxide), វីតាមីន E",
+        usage: "លាបលើផ្ទៃមុខ និងក រៀងរាល់ព្រឹកមុនចេញក្រៅ"
+    },
+    {
+        id: 3,
+        name: "P24 Secrets - គ្រីមយប់ជួសជុលស្បែក",
+        subtitle: "គ្រីមបំប៉នស្បែកពេលយប់ 🎀",
+        badge: "ផលិតផលលេខ ០៣",
+        image: "assets/images/products/p3.jpg",
+        description: "គ្រីមយប់ជួយស្ដារ និងជួសជុលស្បែកក្នុងពេលរាត្រី ឱ្យប្រែជាទន់ល្មើយនៅពេលព្រឹក។",
+        ingredients: "ប៉ិបថាយ (Peptides), ប្រេងស៊ាបាត់ទ័រ (Shea Butter), ប្រេងកុលាប (Rosehip)",
+        usage: "លាប និងម៉ស្សាស្រាលៗមុនចូលគេង"
+    },
+    {
+        id: 4,
+        name: "P24 Secrets - ហ្វូមលាងមុខពពុះទន់",
+        subtitle: "ហ្វូមលាងមុខសម្អាតជ្រៅ 🎀",
+        badge: "ផលិតផលលេខ ០៤",
+        image: "assets/images/products/p4.jpg",
+        description: "ហ្វូមលាងមុខពពុះទន់ល្មើយ សម្អាតធូលីដី និងខ្លាញ់លើសបានយ៉ាងជ្រៅ ដោយមិនស្ងួតស្បែក។",
+        ingredients: "សារធាតុចម្រាញ់តែបៃតង, អាស៊ីតសាលីស៊ីលីក (Salicylic Acid), គ្លីសេរីន",
+        usage: "ប្រើប្រាស់សម្អាតផ្ទៃមុខ ព្រឹក-ល្ងាច"
+    },
+    {
+    id: 5,
+    name: "P24 Secrets - លេការពារកំដៅថ្ងៃ BB Creme",
+    subtitle: "BB P24 លេខ០២ (សាច់ ស) ☀️",
+    badge: "ផលិតផលលេខ ០៥",
+    image: "assets/images/products/p5.jpg",
+    description: "គ្រីមការពារកំដៅថ្ងៃ BB ជួយការពារស្បែកពីកាំរស្មី UVA & UVB (SPF 50+ PA++++), ប៉ូវបំប៉នស្បែក និងជួយឲ្យស្បែកមុខភ្លឺថ្លាបែបធម្មជាតិ។",
+    ingredients: "UVA/UVB Protection, Non-Greasy Nourishing Formula",
+    usage: "លាបលើផ្ទៃមុខ និងក មុនពេលចេញកំដៅថ្ងៃ ១៥-៣០ នាទី"
+},
+    {
+    id: 6,
+    name: "P24 Secrets - ទឹកជូតមុខ Purify Cleansing Water",
+    subtitle: "ទឹកជូតមុខសំអាតជម្រៅ និងផ្តល់សំណើម 💧",
+    badge: "ផលិតផលលេខ ០៦",
+    image: "assets/images/products/p6.jpg",
+    description: "ទឹកជូតមុខ Micellar Water ជួយជូតសំអាតគ្រឿងក្រអូប និងធូលីដីយ៉ាងជ្រៅ ជួយកាត់បន្ថយមុន ស្តារកម្រិត pH ធម្មជាតិ និងផ្តល់សំណើមដល់ស្បែក។",
+    ingredients: "Soothing Micellar Water Formula, Hydrating Complex",
+    usage: "ចាក់លើសំឡី រួចជូតសម្អាតឱ្យសព្វផ្ទៃមុខ និងក ហើយចាំលាងមុខជាមួយហ្វូម"
+},
+    {
+  id: 7,
+  name: "P24 Secrets - ម៉ាសបិតមុខ Whitening and Brightening",
+  subtitle: "ម៉ាសបិតមុខរូបមន្តខ្យង និងក្រូចឆ្មារ 🍋",
+  badge: "ផលិតផលថ្មី",
+  image: "assets/images/products/p7.jpg",
+  description: "ម៉ាសបិតមុខ Whitening and Brightening ជួយឱ្យស្បែកមុខស ភ្លឺថ្លា មានសំណើមជ្រៅ រឹតបន្តឹងរន្ធញើស និងធ្វើឱ្យស្បែកតឹងណែន។",
+  ingredients: "សារធាតុចម្រាញ់ពីខ្យង (Snail Mucin), វីតាមីន C ពីក្រូចឆ្មារ, អាស៊ីត Hyaluronic",
+  usage: "បិតម៉ាសលើផ្ទៃមុខដែលលាងស្អាត រួចទុករយៈពេល 15-20 នាទី បន្ទាប់មកដកចេញ ហើយម៉ាស្សាស្រាលៗឱ្យសេរ៉ូមជ្រាបចូលស្បែក។"
+},
+    {
+  id: 8,
+  name: "P24 Secrets - សំឡីជែលព្រឺក Hyaluronic Acid Moisturize Pad",
+  subtitle: "សំឡីជូត និងផ្តិតបង្កើនសំណើមស្បែក 💧",
+  badge: "ផលិតផលថ្មី",
+  image: "assets/images/products/p8.jpg",
+  description: "សំឡីជែល Hyaluronic Acid បង្កើនសំណើមស្បែក ធ្វើឱ្យស្បែកទន់រលោង កាត់បន្ថយស្នាមជ្រួញ ជួយឱ្យស្បែកតឹង និងទប់ស្កាត់ការបាត់បង់សំណើម។",
+  ingredients: "Collagen, Hyaluronic Acid, Niacinamide",
+  usage: "ប្រើសំឡីជូត ឬផ្តិតស្រាលៗលើផ្ទៃមុខបន្ទាប់ពីលាងសម្អាតមុខរួច (មានចំនួន 70 pads / 140ml)"
+},
+    {
+  id: 9,
+  name: "P24 Secrets - សំឡីជូតមុខពេលយប់ Salicylic Acid Ampoule Pad",
+  subtitle: "សំឡីជូតមុខពេលយប់ Calming Toner Pad 🌙",
+  badge: "ផលិតផលថ្មី",
+  image: "assets/images/products/p9.jpg",
+  description: "សំឡីជូតមុខពេលយប់ជួយព្យាបាលស្នាមមុនយ៉ាងមានប្រសិទ្ធភាព (មុនក្បាលខ្មៅ និងមុនខ្សាច់) កម្ចាត់កោសិកាស្បែកដែលងាប់ Exfoliate ធ្វើឱ្យស្បែកស្រស់ថ្លា និងបំបាត់បញ្ហាស្បែករលាកដោយសារមុន។",
+  ingredients: "Salicylic Acid, Calming Botanical Extracts",
+  usage: "ប្រើសំឡីជូត ឬផ្តិតស្រាលៗលើផ្ទៃមុខពេលយប់បន្ទាប់ពីលាងសម្អាតមុខរួច (មានចំនួន 70 pads / 140ml)"
+},
+    {
+  id: 10,
+  name: "P24 Secrets - ឡេក្លៀក",
+  subtitle: "ឡេលាបក្លៀកឱ្យសរលោង និងបាត់ក្លិន 🌸",
+  badge: "ផលិតផលថ្មី",
+  image: "assets/images/products/p10.jpg",
+  description: "គ្រីមលាបក្លៀកជួយធ្វើឱ្យស្បែកក្លៀកសភ្លឺថ្លា កាត់បន្ថយស្បែកមាន (Chicken Skin) ធ្វើឱ្យស្បែកទន់រលោង ព្រមទាំងជួយទប់ស្កាត់ និងបំបាត់ក្លិនក្លៀកបានយ៉ាងល្អ។",
+  ingredients: "Niacinamide, Alpha Arbutin, Natural Extract Formula",
+  usage: "លាបលើស្បែកក្លៀកជារៀងរាល់ថ្ងៃ បន្ទាប់ពីងូតទឹករួច (យប់)"
+},
+    {
+  id: 11,
+  name: "P24 Secrets - សាប៊ូកក់សក់ Born & Crafted! Shampoo",
+  subtitle: "សាប៊ូកក់សក់ជួយឱ្យសក់រលាស់ និងមានទម្ងន់ 🌿",
+  badge: "ផលិតផលថ្មី", 
+  image: "assets/images/products/p11.jpg",
+  description: "សាប៊ូកក់សក់រូបមន្តធម្មជាតិ Born & Crafted! ជួយសម្អាតស្បែកក្បាលបានស្អាតល្អ កាត់បន្ថយសក់ជ្រុះ ជួយឱ្យឫសសក់រឹងមាំ និងសក់ទន់រលោងមានទម្ងន់។",
+  ingredients: "Natural Herb Extracts, Keratin, Essential Oils Formula",
+  usage: "ចាក់សាប៊ូលើបាតដៃ រួចលាបលើសក់ដែលសើម ញីថ្នមៗឱ្យបង្កើតពពុះ បន្ទាប់មកលាងសម្អាតចេញដោយទឹកស្អាត"
+},
+    {
+  id: 12,
+  name: "P24 Secrets - គ្រីមអប់សក់ Born & Crafted! Hair Mask",
+  subtitle: "គ្រីមអប់សក់ជួយស្តារសក់ខូចឱ្យទន់រលោង 🥑",
+  badge: "ផលិតផលថ្មី",
+  image: "assets/images/products/p12.jpg",
+  description: "គ្រីមអប់សក់ Born & Crafted! Hair Mask ជួយចិញ្ចឹម និងស្តារសក់ស្ងួតបែកចុង សក់ខូចដោយសារការលាបពណ៌ ឬកំដៅ ឱ្យត្រឡប់មកទន់រលោង មានសំណើម និងមានទម្ងន់ឡើងវិញ។",
+  ingredients: "Keratin, Argan Oil, Natural Nourishing Extracts",
+  usage: "បន្ទាប់ពីកក់សក់រួច លាបគ្រីមអប់សក់ឱ្យសព្វ (ចៀសវាងស្បែកក្បាល) ទុករយៈពេល ៥-១០ នាទី រួចលាងទឹកចេញឱ្យស្អាត"
+},
+  {
+    id: 13,
+    name: "P24 Secrets - សេរ៉ូមលាបខ្លួន Deliver Intensive Nourishing 10 (Glow Boost)",
+    subtitle: "សេរ៉ូមផ្តល់សំណើមជ្រៅ និងធ្វើឱ្យស្បែក Glow  ✨",
+    badge: "ផលិតផលថ្មី",
+    image: "assets/images/products/p13.jpg",
+    description: "សេរ៉ូមបំប៉នស្បែកដងខ្លួនរូបមន្តប្រមូលផ្តុំ ជួយផ្តល់សំណើមយ៉ាងជ្រាលជ្រៅ ការពារស្បែកស្ងួត និងធ្វើឱ្យស្បែកទន់រលោងមានពន្លឺថ្លា។",
+    ingredients: "Squalane, Hyaluronic Acid, Panthenol",
+    usage: "លាបលើស្បែកដងខ្លួនជារៀងរាល់ថ្ងៃ បន្ទាប់ពីងូតទឹករួច"
+  },
+  {
+    id: 14,
+    name: "P24 Secrets - សេរ៉ូមលាបខ្លួន Extra Bright Crystal White Serum",
+    subtitle: "សេរ៉ូមបង្កើនភាពសភ្លឺថ្លាដល់ស្បែកដងខ្លួន 💎",
+    badge: "ផលិតផលថ្មី",
+    image: "assets/images/products/p14.jpg",
+    description: "សេរ៉ូមលាបខ្លួនរូបមន្ត Extra Bright ជួយកាត់បន្ថយស្នាមអុចខ្មៅ ជួយឱ្យស្បែកសភ្លឺថ្លាបែបធម្មជាតិ និងមានភាពទន់រលោង។",
+    ingredients: "50x Vitamin C, Crystal White Formula, Pure Vitamin E",
+    usage: "លាបលើស្បែកដងខ្លួនជារៀងរាល់ថ្ងៃ ព្រឹក និងយប់"
+  },
+    {
+  id: 15,
+  name: "P24 Secrets - ឡូសិនបំប៉នស្បែក Botanical Nourishment",
+  subtitle: "ឡូសិនផ្សំដោយប្រេងរុក្ខជាតិធម្មជាតិ 🌿",
+  badge: "ផលិតផលថ្មី",
+  image: "assets/images/products/p15.jpg",
+  description: "ឡូសិនបំប៉នស្បែកផ្សំដោយប្រេងរុក្ខជាតិធម្មជាតិ ជួយរក្សាសំណើម ការពារស្បែកស្ងួត និងជួយឱ្យស្បែកមានពន្លឺថ្លាចែងចាំងបែបធម្មជាតិ។",
+  ingredients: "Botanical Extracts, Natural Oils (Macadamia/Argan Oil)",
+  usage: "លាបលើស្បែកដងខ្លួនជារៀងរាល់ថ្ងៃ បន្ទាប់ពីងូតទឹករួច ដើម្បីទទួលបានស្បែកទន់រលោង"
+},
+    {
+  id: 16,
+  name: "P24 Secrets - ឡូសិន Softening & Intensive Skin Lotion",
+  subtitle: "ឡូសិនផ្តល់សំណើមជ្រៅ និងធ្វើឱ្យស្បែកទន់រលោង 🧴",
+  badge: "ផលិតផលថ្មី",
+  image: "assets/images/products/p16.jpg",
+  description: "ឡូសិនបំប៉នស្បែកដងខ្លួនរូបមន្តប្រមូលផ្តុំ Sodium Hyaluronate និង Shea Butter ជួយផ្តល់សំណើមជ្រៅ ជួសជុលស្បែកស្ងួតប្រេះស្រកា និងការពាររបាំងការពារស្បែកឱ្យមានសុខភាពល្អ។",
+  ingredients: "Sodium Hyaluronate, Shea Butter, Squalane, Ceramide NP, Panthenol",
+  usage: "លាបលើស្បែកដងខ្លួនជារៀងរាល់ថ្ងៃ ព្រឹក និងយប់ ឬប្រើប្រាស់បន្ទាប់ពីងូតទឹករួច"
+}
 ];
