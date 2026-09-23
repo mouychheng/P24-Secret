@@ -1,0 +1,17 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+body {
+    font-family: 'Kantumruy Pro', sans-serif;
+    background-color: #FBF8F3;
+    color: #4A3222;
+}
+
+.font-serif-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.modal-backdrop {
+    background-color: rgba(42, 26, 16, 0.7);
+    backdrop-filter: blur(4px);
+}
