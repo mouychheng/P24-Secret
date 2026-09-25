@@ -66,3 +66,19 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* ស្ទីលចំណងជើង Luxury Gold / Warm Bronze ចាំងលេចធ្លោ */
+.title-gradient-luxury {
+    background: linear-gradient(135deg, #4A321B 0%, #A97C50 40%, #D5B592 70%, #6E4927 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    filter: drop-shadow(0px 2px 4px rgba(110, 73, 39, 0.15));
+}
+
+/* Badge ខាងលើអក្សរ ពណ៌ Warm Gold Nude ស្រទន់ */
+.badge-luxury {
+    background: linear-gradient(135deg, #F3E9DC 0%, #E5D0B8 100%);
+    border: 1px solid #C6A382;
+    color: #6E4927;
+}
