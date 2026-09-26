@@ -20,7 +20,7 @@ const productsData = [
         name: "P24 Secrets - ឡេការពារកម្តៅថ្ងៃ UV",
         subtitle: "គ្រីមបំប៉នការពារកម្តៅថ្ងៃ និង UV 🎀",
         badge: "ផលិតផលលេខ ០២",
-        netWeight: "60 ml", // 👈 កែសម្រួលតាមការបញ្ជាក់របស់អ្នករួចរាល់
+        netWeight: "60 ml",
         image: "assets/images/products/p2.jpg",
         description: "គ្រីមលាបការពារស្បែកពីពន្លឺព្រះអាទិត្យ កាំរស្មី UV និងពន្លឺអេក្រង់ ជួយឱ្យស្បែកស្រស់ថ្លាពេញមួយថ្ងៃ។",
         ingredients: "នីអាស៊ីណាម៉ាយ (Niacinamide), ទីតាញ៉ូម ឌីអុកស៊ីត (Titanium Dioxide), វីតាមីន E",
@@ -33,7 +33,7 @@ const productsData = [
         badge: "ផលិតផលលេខ ០៣",
         netWeight: "10 g",
         image: "assets/images/products/p3.jpg",
-        description: "គ្រីមយប់ជួយស្ដារ និងជួសជុលស្បែកក្នុងពេលរាត្រី ឱ្យប្រែជាទន់ល្មើយនៅពេលព្រឹក។",
+        description: "គ្រីមយប់ជួយស្ដារ និងជួសជុលស្បែកក្នុងពេលយប់ ឱ្យប្រែជាទន់ល្មើយនៅពេលព្រឹក។",
         ingredients: "ប៉ិបថាយ (Peptides), ប្រេងស៊ាបាត់ទ័រ (Shea Butter), ប្រេងកុលាប (Rosehip)",
         usage: "លាប និងម៉ស្សាស្រាលៗមុនចូលគេង"
     },
@@ -55,7 +55,7 @@ const productsData = [
         badge: "ផលិតផលលេខ ០៥",
         netWeight: "60 ml",
         image: "assets/images/products/p5.jpg",
-        description: "គ្រីមការពារកំដៅថ្ងៃ BB ជួយការពារស្បែកពីកាំរស្មី UVA & UVB (SPF 50+ PA++++), ប៉ូវបំប៉នស្បែក និងជួយឲ្យស្បែកមុខភ្លឺថ្លាបែបធម្មជាតិ។",
+        description: "គ្រីមការពារកំដៅថ្ងៃ BB ជួយការពារស្បែកពីកាំរស្មី UVA & UVB (SPF 50+ PA++++), បំប៉នស្បែក និងជួយឲ្យស្បែកមុខភ្លឺថ្លាបែបធម្មជាតិ។",
         ingredients: "UVA/UVB Protection, Non-Greasy Nourishing Formula",
         usage: "លាបលើផ្ទៃមុខ និងក មុនពេលចេញកំដៅថ្ងៃ ១៥-៣០ នាទី"
     },
@@ -118,7 +118,7 @@ const productsData = [
         id: 11,
         name: "P24 Secrets - សាប៊ូកក់សក់ Born & Crafted! Shampoo",
         subtitle: "សាប៊ូកក់សក់ជួយឱ្យសក់រលាស់ និងមានទម្ងន់ 🌿",
-        badge: "ផលិតផលថ្មី", 
+        badge: "ផលិតផលថ្មី",
         netWeight: "500 ml",
         image: "assets/images/products/p11.jpg",
         description: "សាប៊ូកក់សក់រូបមន្តធម្មជាតិ Born & Crafted! ជួយសម្អាតស្បែកក្បាលបានស្អាតល្អ កាត់បន្ថយសក់ជ្រុះ ជួយឱ្យឫសសក់រឹងមាំ និងសក់ទន់រលោងមានទម្ងន់។",

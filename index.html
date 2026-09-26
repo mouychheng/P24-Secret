@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P24 Secrets - Warm Bronze & Cute Showcase 🎀</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -47,55 +47,57 @@
 
     <!-- Navigation Header -->
     <header class="sticky top-0 z-40 bg-brand-50/90 backdrop-blur-md border-b border-brand-200/60 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2">
+
             <!-- Logo Section -->
-            <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-400 bg-white shadow-sm flex items-center justify-center">
-                    <img src="assets/images/logo.jpg" 
-                         alt="P24 Secrets Logo" 
-                         class="w-full h-full object-cover">
+            <a href="#" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+                <div
+                    class="w-9 h-9 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-brand-400 bg-white shadow-sm flex items-center justify-center shrink-0">
+                    <img src="assets/images/logo.jpg" alt="P24 Secrets Logo" class="w-full h-full object-cover">
                 </div>
-                <span class="font-bold text-brand-700 text-lg tracking-wide flex items-center gap-1.5">
-                    P24 Secrets <i class="fa-solid fa-ribbon text-pink-400 text-sm"></i>
+                <span
+                    class="font-bold text-brand-700 text-sm sm:text-lg tracking-wide flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+                    P24 Secrets <i class="fa-solid fa-ribbon text-pink-400 text-xs sm:text-sm"></i>
                 </span>
             </a>
 
-            <!-- Navigation Links -->
+            <!-- Navigation Links (លាក់លើទូរស័ព្ទ បង្ហាញលើ Desktop) -->
             <nav class="hidden lg:flex items-center space-x-8 text-xs font-medium text-brand-800">
                 <a href="#hero" class="hover:text-brand-500 transition">ទំព័រដើម</a>
-                <a href="#about" class="hover:text-brand-500 transition">អំពីប្រេន</a>
-                <a href="#products" class="hover:text-brand-500 transition">ផលិតផលទាំង ១៦ មុខ 🎀</a>
+                <a href="#about" class="hover:text-[#A97C50] transition">អំពីប្រេន</a>
+                <a href="#productsGrid" class="hover:text-brand-500 transition">ផលិតផលទាំង ១៦ មុខ 🎀</a>
                 <a href="#contact" class="hover:text-brand-500 transition">ទំនាក់ទំនង</a>
             </nav>
 
-            <!-- TikTok Button ជាមួយអក្សររត់មានចលនា -->
-            <a href="https://www.tiktok.com/@chhing1210" 
-               target="_blank" 
-               class="flex items-center space-x-2 bg-white/90 border border-brand-300/80 px-4 py-1.5 rounded-full text-xs text-brand-800 font-medium shadow-sm hover:bg-black hover:text-white hover:border-black transition duration-300 w-44 sm:w-56 overflow-hidden">
-                <i class="fa-brands fa-tiktok text-sm text-black flex-shrink-0"></i>
+            <!-- TikTok Button ជាមួយអក្សររត់មានចលនា (តម្រូវទំហំតាម Responsive) -->
+            <a href="https://www.tiktok.com/@chhing1210" target="_blank"
+                class="flex items-center space-x-1.5 sm:space-x-2 bg-white/90 border border-brand-300/80 px-2.5 sm:px-4 py-1.5 rounded-full text-xs text-brand-800 font-medium shadow-sm hover:bg-black hover:text-white hover:border-black transition duration-300 w-28 sm:w-56 overflow-hidden shrink-0">
+                <i class="fa-brands fa-tiktok text-xs sm:text-sm text-black shrink-0"></i>
                 <div class="overflow-hidden w-full relative">
-                    <span class="animate-marquee inline-block font-semibold">
+                    <span class="animate-marquee inline-block font-semibold text-[10px] sm:text-xs whitespace-nowrap">
                         អ្នករៀបចំ tik tok : @chhing1210 🎀
                     </span>
                 </div>
             </a>
+
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative py-12 px-6 max-w-7xl mx-auto">
+    <section id="hero" class="relative py-12 px-4 sm:px-6 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
+
             <!-- Founder Image Side -->
             <div class="flex justify-center order-1 lg:order-1">
-                <div class="relative w-full max-w-md rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white group transition-all duration-500">
-                    <img src="assets/images/founder.jpg" 
-                         alt="P24 Secrets Founder" 
-                         class="w-full h-[460px] object-cover object-center group-hover:scale-105 transition duration-700 ease-in-out">
-                    
-                    <div class="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md border border-white/50 rounded-2xl p-4 text-slate-800 transform transition duration-300">
-                        <span class="inline-flex items-center gap-1 bg-pink-400 text-white text-[10px] font-semibold px-2.5 py-0.5 rounded-full mb-1 shadow-sm">
+                <div
+                    class="relative w-full max-w-md rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white group transition-all duration-500">
+                    <img src="assets/images/founder.jpg" alt="P24 Secrets Founder"
+                        class="w-full h-[460px] object-cover object-center group-hover:scale-105 transition duration-700 ease-in-out">
+
+                    <div
+                        class="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md border border-white/50 rounded-2xl p-4 text-slate-800 transform transition duration-300">
+                        <span
+                            class="inline-flex items-center gap-1 bg-pink-400 text-white text-[10px] font-semibold px-2.5 py-0.5 rounded-full mb-1 shadow-sm">
                             <i class="fa-solid fa-ribbon"></i> CEO Brand P24
                         </span>
                         <h3 class="font-bold text-sm text-brand-800 tracking-wide">P24 Secrets Founder</h3>
@@ -106,27 +108,30 @@
 
             <!-- Content Side -->
             <div class="space-y-6 order-2 lg:order-2">
-                <div class="inline-flex items-center space-x-2 bg-brand-100 border border-brand-300 px-4 py-1.5 rounded-full text-[11px] font-semibold text-brand-700 tracking-wider">
+                <div
+                    class="inline-flex items-center space-x-2 bg-brand-100 border border-brand-300 px-4 py-1.5 rounded-full text-[11px] font-semibold text-brand-700 tracking-wider">
                     <i class="fa-solid fa-heart text-pink-400 text-xs"></i>
                     <span>MY SECRET BEAUTY COLLECTION</span>
                 </div>
 
-               <div class="space-y-2">
-    <div class="space-y-2">
-    <p class="text-sm font-semibold text-brand-600">សូមស្វាគមន៍មកកាន់ពិភពសម្រស់ P24 Secrets ✨</p>
-    <h1 class="text-4xl sm:text-5xl font-extrabold font-serif-title leading-tight min-h-[60px] flex items-center">
-        <!-- ប្រើអក្សរ Gradient ពណ៌ត្នោតមាស មិនមានពណ៌ផ្កាឈូក -->
-        <span id="typewriter-title" class="title-gradient"></span>
-        <span class="animate-ping text-brand-500 font-light ml-1">|</span>
-    </h1>
-</div>
+                <div class="space-y-2">
+                    <p class="text-sm font-semibold text-brand-600">សូមស្វាគមន៍មកកាន់ពិភពសម្រស់ P24 Secrets ✨</p>
+                    <h1
+                        class="text-3xl sm:text-5xl font-extrabold font-serif-title leading-tight min-h-[60px] flex items-center">
+                        <!-- ប្រើអក្សរ Gradient ពណ៌ត្នោតមាស មិនមានពណ៌ផ្កាឈូក -->
+                        <span id="typewriter-title" class="title-gradient"></span>
+                        <span class="animate-ping text-brand-500 font-light ml-1">|</span>
+                    </h1>
+                </div>
 
                 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-light max-w-xl">
-                    ទំព័រវេបសាយបង្ហាញពីព័ត៌មានប្រេន និងបណ្តុំផលិតផលថែរក្សាសម្រស់ទាំង ១៦ មុខ។ រចនាឡើងយ៉ាងសម្រិតសម្រាំងជាមួយស្ទីល Warm Nude & Brown ស្រទន់ Cute Cute ដើម្បីចែករំលែកនូវចំណេះដឹង និងការថែទាំស្បែកមុខឱ្យមានសុខភាពល្អ។
+                    ទំព័រវេបសាយបង្ហាញពីព័ត៌មានប្រេន និងបណ្តុំផលិតផលថែរក្សាសម្រស់ទាំង ១៦ មុខ។
+                    រចនាឡើងយ៉ាងសម្រិតសម្រាំងជាមួយស្ទីល Warm Nude & Brown ស្រទន់ Cute Cute ដើម្បីចែករំលែកនូវចំណេះដឹង
+                    និងការថែទាំស្បែកមុខឱ្យមានសុខភាពល្អ។
                 </p>
 
                 <!-- Stats / Features -->
-                <div class="grid grid-cols-3 gap-4 pt-4 border-t border-brand-200/80 max-w-lg">
+                <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-4 border-t border-brand-200/80 max-w-lg">
                     <div class="text-center p-3 rounded-2xl bg-white/70 border border-brand-200 shadow-sm">
                         <span class="block text-xl font-bold text-brand-700 font-serif-title">១៦</span>
                         <span class="text-[11px] text-slate-500">ផលិតផលបង្ហាញ</span>
@@ -143,7 +148,8 @@
 
                 <!-- CTA Button -->
                 <div class="pt-2">
-                    <a href="#products" class="inline-flex items-center space-x-2 px-7 py-3 rounded-full bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold shadow-md hover:shadow-lg transition duration-300">
+                    <a href="#productsGrid"
+                        class="inline-flex items-center space-x-2 px-7 py-3 rounded-full bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold shadow-md hover:shadow-lg transition duration-300">
                         <span>មើលផលិតផលទាំង ១៦ មុខ 🎀</span>
                         <i class="fa-solid fa-arrow-down text-xs animate-bounce"></i>
                     </a>
@@ -154,152 +160,210 @@
     </section>
 
     <!-- Products Section -->
-    <section id="products" class="py-16 px-6 max-w-7xl mx-auto">
-        
-      <!-- Products Section Header -->
-<div class="text-center space-y-4 mb-12">
-    
-    <!-- Top Luxury Badge -->
-    <div class="inline-flex items-center gap-2 badge-luxury px-5 py-1.5 rounded-full shadow-sm">
-        <i class="fa-solid fa-crown text-amber-600 text-xs"></i>
-        <span class="text-[11px] font-bold tracking-widest uppercase">P24 Secrets Collection</span>
-        <i class="fa-solid fa-sparkles text-amber-600 text-xs animate-pulse"></i>
-    </div>
+    <section id="products" class="py-8 sm:py-16 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 
-<!-- 1. PERSONAL QUOTE CARD SECTION -->
-<section class="py-8 px-4 max-w-4xl mx-auto">
-    <div class="bg-gradient-to-r from-[#FFF9F3] via-[#F3E9DC] to-[#FFF9F3] border border-[#C6A382]/30 rounded-3xl p-6 md:p-8 text-center shadow-sm relative overflow-hidden">
-        <i class="fa-solid fa-quote-left text-2xl text-[#A97C50] mb-2 block"></i>
-        <p class="text-lg md:text-xl font-bold text-[#6E4927] leading-relaxed font-serif">
-            « ការថែរក្សាស្បែកខ្លួនឯង គឺជាកាដូដ៏ល្អបំផុតសម្រាប់ជីវិត »
-        </p>
-        <p class="text-xs md:text-sm text-[#A97C50] mt-1 font-medium italic">
-            "Beauty begins the moment you decide to be yourself."
-        </p>
-        <div class="w-12 h-0.5 bg-[#C6A382] mx-auto mt-4 rounded-full"></div>
-    </div>
-</section>
-
-<!-- 2. PRODUCTS TITLE & SEARCH BAR SECTION -->
-<section class="py-6 px-4 max-w-6xl mx-auto">
-    <!-- Title -->
-    <div class="text-center mb-6">
-        <h2 class="text-2xl md:text-3xl font-bold text-[#6E4927]">
-            បញ្ជីផលិតផលទាំង ១៦ មុខ
-        </h2>
-    </div>
-
-    <!-- Search Bar -->
-    <div class="max-w-md mx-auto relative mb-8">
-        <div class="relative flex items-center">
-            <input 
-                type="text" 
-                id="searchInput" 
-                onkeyup="searchProducts()"
-                placeholder="ស្វែងរកឈ្មោះផលិតផល (ឧទាហរណ៍៖ សេរ៉ូម, ឡេ, ហ្វូម...)" 
-                class="w-full py-3 pl-11 pr-24 text-sm text-[#6E4927] bg-[#FFF9F3] border border-[#C6A382]/50 rounded-full focus:outline-none focus:ring-2 focus:ring-[#C6A382] placeholder-[#A97C50]/60 shadow-sm transition"
-            >
-            <i class="fa-solid fa-magnifying-glass absolute left-4 text-[#A97C50]"></i>
-            <button 
-                onclick="searchProducts()" 
-                class="absolute right-1.5 px-4 py-1.5 bg-[#6E4927] hover:bg-[#53351B] text-white text-xs font-medium rounded-full transition shadow-sm"
-            >
-                ស្វែងរក
-            </button>
+        <!-- Products Section Header -->
+        <div class="text-center space-y-4 mb-8 sm:mb-12">
+            <!-- Top Luxury Badge -->
+            <div class="inline-flex items-center gap-2 badge-luxury px-5 py-1.5 rounded-full shadow-sm">
+                <i class="fa-solid fa-crown text-amber-600 text-xs"></i>
+                <span class="text-[11px] font-bold tracking-widest uppercase">P24 Secrets Collection</span>
+                <i class="fa-solid fa-sparkles text-amber-600 text-xs animate-pulse"></i>
+            </div>
         </div>
-    </div>
 
-    <!-- Container បង្ហាញផលិតផល -->
-    <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-        <!-- ផលិតផល Render ចេញពី products.js -->
-    </div>
-</section>
+        <!-- 1. PERSONAL QUOTE CARD SECTION -->
+        <!-- Section អំពីប្រេន P24 Secrets -->
+        <div id="about" class="py-12 bg-[#F3E9DC]/40 border-t border-[#C6A382]/20 my-10 rounded-3xl">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <!-- Title -->
+                <h2 class="text-2xl md:text-3xl font-extrabold text-[#6E4927] mb-4">
+                    រឿងរ៉ាវអំពី P24 Secrets
+                </h2>
 
+                <!-- Description -->
+                <p class="text-sm md:text-base text-[#6E4927]/80 leading-relaxed max-w-2xl mx-auto mb-6">
+                    P24 Secrets គឺជាប្រេនថែរក្សាសម្រស់ដែលផ្តោតលើគុណភាព និងសុវត្ថិភាពជាចម្បង។
+                    យើងខ្ញុំជ្រើសរើសយ៉ាងសម្រិតសម្រាំងនូវរូបមន្តបំប៉នស្បែកបានជ្រៅ ដើម្បីជួយឱ្យស្បែកមុខ
+                    និងដងខ្លួនរបស់អ្នកស្រស់ថ្លា ទន់រលោង និងមានពន្លឺចែងចាំងបែបធម្មជាតិ។
+                </p>
 
-    <!-- Decorative Line -->
-    <div class="flex items-center justify-center gap-2 pt-1">
-        <span class="w-12 h-[2px] bg-gradient-to-r from-transparent to-brand-400 rounded-full"></span>
-        <span class="w-2.5 h-2.5 bg-brand-500 rounded-full border-2 border-white shadow-sm"></span>
-        <span class="w-12 h-[2px] bg-gradient-to-l from-transparent to-brand-400 rounded-full"></span>
-    </div>
-
-    <p class="text-xs sm:text-sm text-brand-700/80 font-medium max-w-md mx-auto pt-1">
-        ចុចលើប៊ូតុង <span class="font-bold text-brand-800 bg-brand-100 px-2 py-0.5 rounded-md">«មើលលម្អិត»</span> ដើម្បីមើលព័ត៌មាន និងរូបមន្តថែរក្សាសម្រស់
-    </p>
-</div>
-
-        <!-- Product Grid -->
-        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- Render by JS -->
+                <!-- Highlights Features -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                    <div class="p-4 bg-white rounded-2xl border border-[#C6A382]/20 shadow-xs">
+                        <i class="fa-solid fa-leaf text-2xl text-[#A97C50] mb-2"></i>
+                        <h3 class="font-bold text-[#6E4927] text-sm mb-1">ផ្សំពីធម្មជាតិ</h3>
+                        <p class="text-xs text-[#A97C50]">សុវត្ថិភាព និងទន់រលោងចំពោះស្បែក</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-2xl border border-[#C6A382]/20 shadow-xs">
+                        <i class="fa-solid fa-shield-halved text-2xl text-[#A97C50] mb-2"></i>
+                        <h3 class="font-bold text-[#6E4927] text-sm mb-1">គុណភាពខ្ពស់</h3>
+                        <p class="text-xs text-[#A97C50]">ទទួលស្គាល់ និងមានការទទួលខុសត្រូវ</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-2xl border border-[#C6A382]/20 shadow-xs">
+                        <i class="fa-solid fa-sparkles text-2xl text-[#A97C50] mb-2"></i>
+                        <h3 class="font-bold text-[#6E4927] text-sm mb-1">ផ្តល់សំណើមជ្រៅ</h3>
+                        <p class="text-xs text-[#A97C50]">ជួយឱ្យស្បែកភ្លឺថ្លាតាមបែបធម្មជាតិ</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="py-8 px-2 sm:px-4 max-w-4xl mx-auto">
+            <div
+                class="bg-gradient-to-r from-[#FFF9F3] via-[#F3E9DC] to-[#FFF9F3] border border-[#C6A382]/30 rounded-3xl p-6 md:p-8 text-center shadow-sm relative overflow-hidden">
+                <i class="fa-solid fa-quote-left text-2xl text-[#A97C50] mb-2 block"></i>
+                <p class="text-base sm:text-lg md:text-xl font-bold text-[#6E4927] leading-relaxed font-serif">
+                    « ការថែរក្សាស្បែកខ្លួនឯង គឺជាកាដូដ៏ល្អបំផុតសម្រាប់ជីវិត »
+                </p>
+                <p class="text-xs md:text-sm text-[#A97C50] mt-1 font-medium italic">
+                    "Beauty begins the moment you decide to be yourself."
+                </p>
+                <div class="w-12 h-0.5 bg-[#C6A382] mx-auto mt-4 rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- 2. PRODUCTS TITLE & SEARCH BAR SECTION -->
+        <div class="text-center my-8 relative px-4">
+            <!-- Mini Badge (អក្សរតូចខាងលើ) -->
+            <div
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F3E9DC] border border-[#C6A382]/30 text-[#6E4927] text-xs font-semibold shadow-xs mb-3">
+                <i class="fa-solid fa-sparkles text-[#A97C50]"></i>
+                <span>P24 Secrets Collection</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h2
+                class="text-2xl md:text-3xl font-extrabold text-[#6E4927] tracking-tight flex items-center justify-center gap-3">
+                <!-- បន្ទាត់លម្អខាងឆ្វេង -->
+                <span class="hidden sm:inline-block w-12 h-[2px] bg-gradient-to-r from-transparent to-[#C6A382]"></span>
+
+                <span>បញ្ជីផលិតផលទាំង <span
+                        class="bg-gradient-to-r from-[#6E4927] to-[#A97C50] bg-clip-text text-transparent">១៦
+                        មុខ</span></span>
+
+                <!-- បន្ទាត់លម្អខាងស្តាំ -->
+                <span class="hidden sm:inline-block w-12 h-[2px] bg-gradient-to-l from-transparent to-[#C6A382]"></span>
+            </h2>
+
+            <!-- Decorative Dot & Lines (ចំណុចលម្អកណ្តាល) -->
+            <div class="flex items-center justify-center gap-2 my-2">
+                <span class="w-10 h-[1.5px] bg-gradient-to-r from-transparent to-[#C6A382]"></span>
+                <span class="w-2 h-2 bg-[#6E4927] rounded-full shadow-xs"></span>
+                <span class="w-10 h-[1.5px] bg-gradient-to-l from-transparent to-[#C6A382]"></span>
+            </div>
+
+            <!-- Instruction Note (ដាក់នៅខាងលើ) -->
+            <p class="text-xs sm:text-sm text-[#6E4927]/80 font-medium max-w-md mx-auto mb-2 leading-relaxed">
+                ចុចលើប៊ូតុង <span
+                    class="font-bold text-[#6E4927] bg-[#F3E9DC] px-2 py-0.5 mx-0.5 rounded-md border border-[#C6A382]/20 shadow-xs inline-block">«មើលលម្អិត»</span>
+                ដើម្បីមើលព័ត៌មាន និងរូបមន្តថែរក្សាសម្រស់
+            </p>
+
+            <!-- Subtitle (អក្សរពន្យល់នៅខាងក្រោម) -->
+            <p class="text-xs md:text-sm text-[#A97C50] font-medium max-w-md mx-auto mt-2">
+                ជ្រើសរើសផលិតផលថែរក្សាសម្រស់ដែលស័ក្តិសមសម្រាប់ស្បែករបស់អ្នក
+            </p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="max-w-md mx-auto relative mb-8">
+            <div class="relative flex items-center">
+                <input type="text" id="searchInput" onkeyup="searchProducts()"
+                    placeholder="ស្វែងរកឈ្មោះផលិតផល (ឧទាហរណ៍៖ សេរ៉ូម, ឡេ, ហ្វូម...)"
+                    class="w-full py-3 pl-11 pr-24 text-sm text-[#6E4927] bg-[#FFF9F3] border border-[#C6A382]/50 rounded-full focus:outline-none focus:ring-2 focus:ring-[#C6A382] placeholder-[#A97C50]/60 shadow-sm transition">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 text-[#A97C50]"></i>
+                <button onclick="searchProducts()"
+                    class="absolute right-1.5 px-4 py-1.5 bg-[#6E4927] hover:bg-[#53351B] text-white text-xs font-medium rounded-full transition shadow-sm">
+                    ស្វែងរក
+                </button>
+            </div>
+        </div>
+
+        <!-- Container បង្ហាញផលិតផល (គាំទ្រទាំង ID productsGrid និង product-grid) -->
+        <div id="productsGrid"
+            class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
+            <!-- ផលិតផល Render ចេញពី products.js/main.js -->
+        </div>
+
     </section>
 
     <!-- Product Modal Detail Box -->
-<div id="product-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4">
-    <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-brand-200 p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+    <div id="product-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4">
+        <div
+            class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-brand-200 p-6 space-y-4 max-h-[90vh] overflow-y-auto">
 
-        <!-- Close Button -->
-        <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-brand-100 hover:bg-brand-200 text-brand-800 flex items-center justify-center transition shadow-sm z-10">
-            <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
+            <!-- Close Button -->
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 w-9 h-9 rounded-full bg-brand-100 hover:bg-brand-200 text-brand-800 flex items-center justify-center transition shadow-sm z-10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center pt-2">
-            <!-- Product Image -->
-            <div class="rounded-2xl overflow-hidden border border-brand-100 bg-brand-50 h-64">
-                <img id="modal-img" src="" alt="Product Image" class="w-full h-full object-cover">
-            </div>
-
-            <!-- Product Header Info -->
-            <div class="space-y-3">
-                <div class="flex flex-wrap items-center gap-2">
-                    <span id="modal-badge" class="bg-brand-500 text-white text-[10px] font-semibold px-3 py-1 rounded-full inline-flex items-center shadow-sm"></span>
-                    <!-- បង្ហាញចំណុះ / ទម្ងន់ផលិតផល -->
-                    <span id="modal-netweight" class="bg-brand-100 text-brand-800 text-[10px] font-bold px-2.5 py-1 rounded-full border border-brand-200/80 inline-flex items-center gap-1">
-                        <i class="fa-solid fa-box text-brand-600 text-[9px]"></i>
-                    </span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center pt-2">
+                <!-- Product Image -->
+                <div class="rounded-2xl overflow-hidden border border-brand-100 bg-brand-50 h-64">
+                    <img id="modal-img" src="" alt="Product Image" class="w-full h-full object-cover">
                 </div>
 
-                <h3 id="modal-title" class="text-xl font-bold text-brand-900 leading-snug"></h3>
-                <p id="modal-subtitle" class="text-xs text-brand-600 italic font-medium"></p>
-                
-                <!-- Rating Stars / Icons ពណ៌មាស Warm Gold -->
-                <div class="flex items-center space-x-1.5 text-amber-500 text-xs pt-1">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <span class="text-slate-500 text-[11px] font-medium ml-1">(P24 Special Selection)</span>
+                <!-- Product Header Info -->
+                <div class="space-y-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span id="modal-badge"
+                            class="bg-brand-500 text-white text-[10px] font-semibold px-3 py-1 rounded-full inline-flex items-center shadow-sm"></span>
+                        <!-- បង្ហាញចំណុះ / ទម្ងន់ផលិតផល -->
+                        <span id="modal-netweight"
+                            class="bg-brand-100 text-brand-800 text-[10px] font-bold px-2.5 py-1 rounded-full border border-brand-200/80 inline-flex items-center gap-1">
+                            <i class="fa-solid fa-box text-brand-600 text-[9px]"></i>
+                        </span>
+                    </div>
+
+                    <h3 id="modal-title" class="text-xl font-bold text-brand-900 leading-snug"></h3>
+                    <p id="modal-subtitle" class="text-xs text-brand-600 italic font-medium"></p>
+
+                    <!-- Rating Stars / Icons ពណ៌មាស Warm Gold -->
+                    <div class="flex items-center space-x-1.5 text-amber-500 text-xs pt-1">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-slate-500 text-[11px] font-medium ml-1">(P24 Special Selection)</span>
+                    </div>
                 </div>
             </div>
+
+            <!-- Product Details Content -->
+            <div class="border-t border-brand-100 pt-4 space-y-3">
+                <div>
+                    <h4 class="font-bold text-brand-800 text-xs uppercase mb-1 flex items-center gap-1.5">
+                        <i class="fa-solid fa-sparkles text-amber-500"></i> ការរៀបរាប់ និងអត្ថប្រយោជន៍
+                    </h4>
+                    <p id="modal-desc"
+                        class="text-xs text-slate-600 leading-relaxed font-light bg-brand-50/70 p-3 rounded-2xl border border-brand-100">
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-brand-800 text-xs uppercase mb-1 flex items-center gap-1.5">
+                        <i class="fa-solid fa-leaf text-brand-500"></i> ធាតុផ្សំសំខាន់ៗ
+                    </h4>
+                    <p id="modal-ingredients"
+                        class="text-xs text-slate-600 leading-relaxed font-light bg-white p-2.5 rounded-xl border border-brand-100/60">
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-brand-800 text-xs uppercase mb-1 flex items-center gap-1.5">
+                        <i class="fa-solid fa-hand-holding-heart text-brand-600"></i> របៀបប្រើប្រាស់
+                    </h4>
+                    <p id="modal-usage"
+                        class="text-xs text-slate-600 leading-relaxed font-light bg-white p-2.5 rounded-xl border border-brand-100/60">
+                    </p>
+                </div>
+            </div>
+
         </div>
-
-        <!-- Product Details Content -->
-        <div class="border-t border-brand-100 pt-4 space-y-3">
-            <div>
-                <h4 class="font-bold text-brand-800 text-xs uppercase mb-1 flex items-center gap-1.5">
-                    <i class="fa-solid fa-sparkles text-amber-500"></i> ការរៀបរាប់ និងអត្ថប្រយោជន៍
-                </h4>
-                <p id="modal-desc" class="text-xs text-slate-600 leading-relaxed font-light bg-brand-50/70 p-3 rounded-2xl border border-brand-100"></p>
-            </div>
-
-            <div>
-                <h4 class="font-bold text-brand-800 text-xs uppercase mb-1 flex items-center gap-1.5">
-                    <i class="fa-solid fa-leaf text-brand-500"></i> ធាតុផ្សំសំខាន់ៗ
-                </h4>
-                <p id="modal-ingredients" class="text-xs text-slate-600 leading-relaxed font-light bg-white p-2.5 rounded-xl border border-brand-100/60"></p>
-            </div>
-
-            <div>
-                <h4 class="font-bold text-brand-800 text-xs uppercase mb-1 flex items-center gap-1.5">
-                    <i class="fa-solid fa-hand-holding-heart text-brand-600"></i> របៀបប្រើប្រាស់
-                </h4>
-                <p id="modal-usage" class="text-xs text-slate-600 leading-relaxed font-light bg-white p-2.5 rounded-xl border border-brand-100/60"></p>
-            </div>
-        </div>
-
     </div>
-</div>
 
     <!-- Footer -->
     <footer id="contact" class="bg-brand-900 text-brand-100 py-12 border-t border-brand-800">
@@ -320,19 +384,29 @@
                 <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">តំណភ្ជាប់រហ័ស</h4>
                 <ul class="space-y-2 text-xs text-brand-200">
                     <li><a href="#hero" class="hover:text-pink-300 transition">ទំព័រដើម</a></li>
-                    <li><a href="#products" class="hover:text-pink-300 transition">បញ្ជីផលិតផលទាំង ១៦ មុខ</a></li>
+                    <li><a href="#productsGrid" class="hover:text-pink-300 transition">បញ្ជីផលិតផលទាំង ១៦ មុខ</a></li>
                 </ul>
             </div>
 
             <div class="space-y-2">
                 <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">ទំនាក់ទំនងប្រេន</h4>
-                <p class="text-xs text-brand-200 flex items-center"><i class="fa-solid fa-envelope text-pink-300 mr-2"></i> Contact: info@p24secrets.com</p>
-                <p class="text-xs text-brand-200 flex items-center"><i class="fa-brands fa-tiktok text-pink-300 mr-2"></i> TikTok: @chornai_pich_</p>
-                <p class="text-xs text-brand-200 flex items-center"><i class="fa-solid fa-location-dot text-pink-300 mr-2"></i> រាជធានីភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</p>
+                <p class="text-xs text-brand-200 flex items-center">
+                    <i class="fa-solid fa-envelope text-pink-300 mr-2"></i> Contact: info@p24secrets.com
+                </p>
+                <p class="text-xs text-brand-200 flex items-center">
+                    <i class="fa-brands fa-facebook text-pink-300 mr-2"></i> Facebook: P24 Secrets
+                </p>
+                <p class="text-xs text-brand-200 flex items-center">
+                    <i class="fa-brands fa-tiktok text-pink-300 mr-2"></i> TikTok: @chornai_pich_
+                </p>
+                <p class="text-xs text-brand-200 flex items-center">
+                    <i class="fa-solid fa-location-dot text-pink-300 mr-2"></i> រាជធានីភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា
+                </p>
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-brand-800/80 text-center text-xs text-brand-300 font-light">
+        <div
+            class="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-brand-800/80 text-center text-xs text-brand-300 font-light">
             © 2026 P24 Secrets Showcase Website. រក្សាសិទ្ធិគ្រប់យ៉ាង 🎀
         </div>
     </footer>
