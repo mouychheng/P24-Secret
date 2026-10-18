@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P24 Secrets - Mini Game Center 🎮🎀</title>
+
+    <!-- Tailwind CSS & Font Awesome Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#FAF6F0',
+                            100: '#F3E9DC',
+                            200: '#E5D0B8',
+                            300: '#D5B592',
+                            400: '#C6A382',
+                            500: '#A97C50',
+                            600: '#8C6036',
+                            700: '#6E4927',
+                            800: '#4A321B',
+                            900: '#2D1E10'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-50 text-slate-700 min-h-screen flex flex-col justify-between antialiased">
+
+    <!-- Header Component Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Game Center -->
+    <main class="flex-grow py-8 px-4 max-w-5xl mx-auto w-full">
+
+        <!-- Game Center Title Header -->
+        <div class="text-center mb-8">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#C6A382]/30 text-[#6E4927] text-xs font-bold shadow-xs mb-3">
+                <i class="fa-solid fa-gamepad text-amber-600"></i>
+                <span>P24 SECRETS MINI GAME HUB 🎀</span>
+            </div>
+            <h1 class="text-2xl sm:text-4xl font-extrabold text-[#6E4927] tracking-tight">
+                មជ្ឈមណ្ឌលហ្គេមកម្សាន្ត និងឈ្នះរង្វាន់! ✨
+            </h1>
+            <p class="text-xs sm:text-sm text-[#A97C50] mt-1">
+                ជ្រើសរើសហ្គេមខាងក្រោម ដើម្បីលេងកម្សាន្ត និងទទួលបានពិន្ទុ ឬ Coupon បញ្ចុះតម្លៃពិសេស 🎁
+            </p>
+        </div>
+
+        <!-- 1. GAME SELECTION GRID (ប៊ូតុងរើសហ្គេមទាំង ១០) -->
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
+            <button onclick="switchGame('memory')"
+                class="game-tab-btn p-3 bg-white hover:bg-brand-100 border border-brand-200 rounded-2xl text-center shadow-2xs transition active:scale-95">
+                <span class="text-2xl block mb-1">🃏</span>
+                <span class="text-xs font-bold text-brand-800">១. ផ្គូផ្គងរូបភាព</span>
+            </button>
+            <button onclick="switchGame('quiz')"
+                class="game-tab-btn p-3 bg-white hover:bg-brand-100 border border-brand-200 rounded-2xl text-center shadow-2xs transition active:scale-95">
+                <span class="text-2xl block mb-1">🧠</span>
+                <span class="text-xs font-bold text-brand-800">២. ទាយឈ្មោះផលិតផល</span>
+            </button>
+            <button onclick="switchGame('dressup')"
+                class="game-tab-btn p-3 bg-white hover:bg-brand-100 border border-brand-200 rounded-2xl text-center shadow-2xs transition active:scale-95">
+                <span class="text-2xl block mb-1">⚡</span>
+                <span class="text-xs font-bold text-brand-800">៣. ចុចរើសរូប P24 ដោយមើលឈ្មោះ</span>
+            </button>
+            <button onclick="switchGame('routine')"
+                class="game-tab-btn p-3 bg-white hover:bg-brand-100 border border-brand-200 rounded-2xl text-center shadow-2xs transition active:scale-95">
+                <span class="text-2xl block mb-1">🧴</span>
+                <span class="text-xs font-bold text-brand-800">៤. លំដាប់ថែស្បែក</span>
+            </button>
+            <button onclick="switchGame('catch')"
+                class="game-tab-btn p-3 bg-white hover:bg-brand-100 border border-brand-200 rounded-2xl text-center shadow-2xs transition active:scale-95">
+                <span class="text-2xl block mb-1">🧺</span>
+                <span class="text-xs font-bold text-brand-800">៥. ចាប់ផលិតផល</span>
+            </button>
+            <button onclick="switchGame('match')"
+                class="game-tab-btn p-3 bg-white hover:bg-brand-100 border border-brand-200 rounded-2xl text-center shadow-2xs transition active:scale-95">
+                <span class="text-2xl block mb-1">🎈</span>
+                <span class="text-xs font-bold text-brand-800">៦. ចុចបំបែកពពុះស្បែក</span>
+            </button>
+            <button onclick="switchGame('word')"
+                class="game-tab-btn p-3 bg-white hover:bg-brand-100 border border-brand-200 rounded-2xl text-center shadow-2xs transition active:scale-95">
+                <span class="text-2xl block mb-1">🔤</span>
+                <span class="text-xs font-bold text-brand-800">៧. ទាយពាក្យអាថ៌កំបាំង</span>
+            </button>
+            <button onclick="switchGame('maze')"
+                class="game-tab-btn p-3 bg-white hover:bg-brand-100 border border-brand-200 rounded-2xl text-center shadow-2xs transition active:scale-95">
+                <span class="text-2xl block mb-1">🌀</span>
+                <span class="text-xs font-bold text-brand-800">៨. រកផ្លូវចេញពីជញ្ជាំង</span>
+            </button>
+            <button onclick="switchGame('match3')"
+                class="game-tab-btn p-3 bg-white hover:bg-brand-100 border border-brand-200 rounded-2xl text-center shadow-2xs transition active:scale-95">
+                <span class="text-2xl block mb-1">🍬</span>
+                <span class="text-xs font-bold text-brand-800">៩. តម្រៀបរូប 3</span>
+            </button>
+            <button onclick="switchGame('hidden')"
+                class="game-tab-btn p-3 bg-white hover:bg-brand-100 border border-brand-200 rounded-2xl text-center shadow-2xs transition active:scale-95">
+                <span class="text-2xl block mb-1">🎡</span>
+                <span class="text-xs font-bold text-brand-800">១០. បង្វិលកង់ Challenge</span>
+            </button>
+        </div>
+
+        <!-- 2. GAME CONTAINERS BOX -->
+        <div
+            class="bg-gradient-to-b from-[#FFF9F3] via-[#F3E9DC] to-[#FAF6F0] border border-[#C6A382]/40 rounded-3xl p-6 shadow-md text-center relative overflow-hidden min-h-[420px] flex flex-col justify-center items-center">
+
+            <!-- GAME 1: MEMORY MATCH -->
+            <div id="game-memory" class="game-screen w-full max-w-md hidden space-y-4">
+                <h2 class="text-xl font-extrabold text-brand-800">🃏 ហ្គេមទី១៖ ផ្គូផ្គងរូបភាពផលិតផល P24 (១២ កាត)</h2>
+                <p class="text-xs text-brand-600">បើកផ្គូផ្គងរូបភាពផលិតផល P24 ទាំង ១២ កាតឱ្យបានដូចគ្នា!</p>
+
+                <div id="memory-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2.5 pt-2"></div>
+
+                <div id="memory-status" class="text-xs font-bold text-emerald-700 hidden">🎉 អបអរសាទរ!
+                    អ្នកផ្គូផ្គងត្រូវទាំង ១២ កាតហើយ!</div>
+                <button onclick="startMemoryGame()"
+                    class="px-5 py-2 bg-brand-700 text-white text-xs font-bold rounded-full shadow-sm hover:bg-brand-800 transition">លេងឡើងវិញ</button>
+            </div>
+
+            <!-- GAME 2: QUIZ -->
+            <div id="game-quiz" class="game-screen w-full max-w-md hidden space-y-4">
+                <h2 class="text-xl font-extrabold text-brand-800">🧠 ហ្គេមទី២៖ ទាយឈ្មោះផលិតផល P24</h2>
+                
+                <div class="bg-white p-4 rounded-2xl border border-brand-200 shadow-2xs text-center space-y-3">
+                    <div id="quiz-number" class="text-xs font-extrabold text-amber-600">សំណួរទី 1/5</div>
+                    <div class="w-36 h-36 mx-auto rounded-xl overflow-hidden border border-brand-200 bg-brand-50 flex items-center justify-center">
+                        <img id="quiz-product-img" src="../assets/images/logo.jpg" class="w-full h-full object-cover" />
+                    </div>
+                    <p class="text-xs font-bold text-brand-600">តើនេះជាផលិតផលអ្វីរបស់ P24 Secrets?</p>
+                    
+                    <div id="quiz-options" class="grid grid-cols-2 gap-2 pt-2">
+                        <!-- JS នឹងបង្កើតប៊ូតុងចម្លើយនៅទីនេះ -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- GAME 3: P24 TAP TAP FAST GAME -->
+            <div id="game-dressup" class="game-screen w-full max-w-md hidden space-y-4">
+                <h2 class="text-xl font-extrabold text-brand-800">⚡ ហ្គេមទី៣៖ ចុចរើសរូប P24 ដោយមើលឈ្មោះ</h2>
+                <p class="text-xs text-brand-600">មើលឈ្មោះផលិតផលខាងលើ រួចចុចជ្រើសរើសរូបឱ្យបានលឿនបំផុត! ⏱️</p>
+
+                <!-- របារពិន្ទុ & ប្រអប់បញ្ជា -->
+                <div class="bg-amber-50 border border-amber-200 p-3 rounded-2xl text-center space-y-1 shadow-2xs">
+                    <div class="flex justify-between items-center text-xs font-extrabold text-brand-800 px-2">
+                        <span>ពិន្ទុ៖ <span id="tap-score" class="text-amber-600">0</span></span>
+                        <span>ពេល៖ <span id="tap-timer" class="text-rose-500">3</span>s</span>
+                    </div>
+                    <div class="text-xs text-brand-600">ចាត់តាំងឱ្យស្វែងរក៖</div>
+                    <div id="tap-target-name"
+                        class="text-sm font-black text-brand-800 bg-white py-1.5 px-3 rounded-xl border border-brand-200 shadow-2xs inline-block">
+                        - ត្រៀមៗ -
+                    </div>
+                </div>
+
+                <!-- ជម្រើសរូបភាព ៤ ប្រអប់ -->
+                <div id="tap-options-grid" class="grid grid-cols-2 gap-3 p-1">
+                    <!-- JS នឹងបង្កើតរូបភាព ៤ ឱ្យចុច -->
+                </div>
+
+                <div class="text-center pt-1">
+                    <button id="tap-start-btn" onclick="startTapGame()"
+                        class="px-6 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white rounded-full text-xs font-bold transition shadow-md active:scale-95">
+                        🎯 ចាប់ផ្តើមលេង!
+                    </button>
+                </div>
+            </div>
+
+            <!-- GAME 4: BUILD SKINCARE ROUTINE -->
+            <div id="game-routine" class="game-screen w-full max-w-md hidden space-y-4">
+                <h2 class="text-xl font-extrabold text-brand-800">🧴 ហ្គេមទី៤៖ រៀបចំលំដាប់ការថែរក្សាស្បែក (៣ Step)</h2>
+                <p class="text-xs text-brand-600">ចុចជ្រើសរើសផលិតផលតាមលំដាប់ប្រកួតប្រជែងសមត្ថភាពរបស់អ្នក!</p>
+                <div id="routine-list" class="space-y-2 text-left"></div>
+                <button onclick="checkRoutine()"
+                    class="px-5 py-2 bg-brand-700 text-white text-xs font-bold rounded-full hover:bg-brand-800 transition">ផ្ទៀងផ្ទាត់លំដាប់</button>
+                <p id="routine-feedback" class="text-xs font-bold pt-1"></p>
+            </div>
+
+            <!-- GAME 5: CATCH THE PRODUCTS -->
+            <div id="game-catch" class="game-screen w-full max-w-md hidden space-y-3">
+                <h2 class="text-xl font-extrabold text-brand-800">🧺 ហ្គេមទី៥៖ ចាប់ផលិតផល P24 ធ្លាក់</h2>
+                <p class="text-xs text-brand-600">ប្រើម្រាមដៃអូសកន្ត្រកទៅឆ្វេង/ស្តាំ ដើម្បីចាប់ផលិតផលដែលធ្លាក់!</p>
+
+                <div id="catch-game-area"
+                    class="relative w-full h-64 bg-white border border-brand-200 rounded-2xl overflow-hidden shadow-inner touch-none cursor-grab active:cursor-grabbing">
+                    <div id="catch-item-box"
+                        class="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-12 rounded-xl overflow-hidden border border-brand-200 bg-brand-50 shadow-xs hidden">
+                        <img id="catch-img" src="" alt="Falling Product"
+                            class="w-full h-full object-cover pointer-events-none">
+                    </div>
+                    <div id="catch-basket"
+                        class="absolute bottom-2 left-1/2 -translate-x-1/2 text-3xl select-none pointer-events-none">🧺
+                    </div>
+
+                    <div id="catch-game-over"
+                        class="absolute inset-0 bg-black/60 backdrop-blur-xs flex flex-col items-center justify-center text-white space-y-2 hidden z-10">
+                        <span class="text-3xl">💔</span>
+                        <h3 class="text-base font-bold">Game Over! អ្នកខកចាប់ ៣ ដងហើយ</h3>
+                        <p class="text-xs">ពិន្ទុសរុប៖ <span id="catch-final-score"
+                                class="font-extrabold text-amber-400">0</span></p>
+                        <button onclick="startCatchGame()"
+                            class="px-4 py-1.5 bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold rounded-full shadow-md transition">លេងម្តងទៀត
+                            🔄</button>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center px-4 font-bold text-xs text-brand-800">
+                    <div>ជីវិត៖ <span id="catch-lives" class="text-rose-500 text-sm">❤️❤️❤️</span></div>
+                    <div>ពិន្ទុ៖ <span id="catch-score" class="text-amber-600 font-extrabold text-sm">0</span></div>
+                </div>
+
+                <div class="text-center pt-1">
+                    <button onclick="startCatchGame()"
+                        class="px-6 py-2 bg-brand-700 hover:bg-brand-800 text-white rounded-full text-xs font-bold transition shadow-xs">ចាប់ផ្តើមលេង
+                        ▶️</button>
+                </div>
+            </div>
+
+            <!-- GAME 6: POP THE BUBBLES -->
+            <div id="game-match" class="game-screen w-full max-w-md hidden space-y-3">
+                <h2 class="text-xl font-extrabold text-brand-800">🎈 ហ្គេមទី៦៖ ចុចបំបែកពពុះស្បែក P24</h2>
+                <p class="text-xs text-brand-600">ចុចលើពពុះសាប៊ូដែលអណ្តែតឡើងលើ ឱ្យបានច្រើនបំផុតក្នុងរយៈពេល ២០ វិនាទី!
+                </p>
+
+                <div id="bubble-game-area"
+                    class="relative w-full h-64 bg-gradient-to-b from-sky-100 to-amber-50 border border-brand-200 rounded-2xl overflow-hidden shadow-inner cursor-pointer select-none">
+                    <div
+                        class="absolute top-2 left-3 right-3 flex justify-between text-xs font-bold text-brand-800 z-10 pointer-events-none">
+                        <span>⏱️ ពេលវេលា៖ <span id="bubble-timer" class="text-rose-600 font-extrabold">20</span>s</span>
+                        <span>🏆 ពិន្ទុ៖ <span id="bubble-score" class="text-amber-600 font-extrabold">0</span></span>
+                    </div>
+
+                    <div id="bubble-container" class="w-full h-full relative"></div>
+
+                    <div id="bubble-game-over"
+                        class="absolute inset-0 bg-black/60 backdrop-blur-xs flex flex-col items-center justify-center text-white space-y-2 hidden z-20">
+                        <span class="text-3xl">🎉</span>
+                        <h3 class="text-base font-bold">អស់ពេលហើយ!</h3>
+                        <p class="text-xs">អ្នកបំបែកបាន៖ <span id="bubble-final-score"
+                                class="font-extrabold text-amber-400">0</span> ពពុះ</p>
+                        <button onclick="startBubbleGame()"
+                            class="px-4 py-1.5 bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold rounded-full shadow-md transition">លេងម្តងទៀត
+                            🔄</button>
+                    </div>
+                </div>
+
+                <div class="text-center pt-1">
+                    <button onclick="startBubbleGame()"
+                        class="px-6 py-2 bg-brand-700 hover:bg-brand-800 text-white rounded-full text-xs font-bold transition shadow-xs">ចាប់ផ្តើមលេង
+                        ▶️</button>
+                </div>
+            </div>
+
+            <!-- GAME 7: WORD PUZZLE -->
+            <div id="game-word" class="game-screen w-full max-w-md hidden space-y-4">
+                <h2 class="text-xl font-extrabold text-brand-800">🔤 ហ្គេមទី៧៖ ទាយពាក្យអាថ៌កំបាំង</h2>
+                <p class="text-xs text-brand-600">ទាយឈ្មោះប្រភេទផលិតផលថែស្បែករបស់ P24 Secrets៖</p>
+
+                <div id="word-card" class="bg-white p-4 rounded-2xl border border-brand-200 space-y-3">
+                    <div class="w-24 h-24 mx-auto rounded-xl overflow-hidden border border-brand-200 bg-brand-50">
+                        <img id="word-img" src="" alt="Hint Product" class="w-full h-full object-cover">
+                    </div>
+                    <div id="word-display" class="text-xl font-extrabold tracking-widest text-brand-800"></div>
+                </div>
+
+                <div id="word-buttons" class="flex justify-center gap-2 flex-wrap"></div>
+                <p id="word-feedback" class="text-xs font-bold pt-1"></p>
+            </div>
+
+            <!-- GAME 8: MAZE CHALLENGE -->
+            <div id="game-maze" class="game-screen w-full max-w-md hidden space-y-4">
+                <h2 class="text-xl font-extrabold text-brand-800">🌀 ហ្គេមទី៨៖ ជួយ P24 រកផ្លូវចេញពីជញ្ជាំង</h2>
+                <p class="text-xs text-brand-600">ចុចប៊ូតុងព្រួញដើម្បីនាំផ្លូវ P24 គេចពីជញ្ជាំង 🧱 ទៅរកច្រកចេញ 🏁!</p>
+
+                <!-- ផ្ទៃ Maze 6x6 (36 ក្រឡា) -->
+                <div id="maze-grid"
+                    class="w-72 h-72 mx-auto bg-white border-2 border-brand-300 rounded-2xl grid grid-cols-6 gap-1 p-2 shadow-inner">
+                </div>
+
+                <!-- ប៊ូតុងបញ្ជាទិសដៅ -->
+                <div class="grid grid-cols-3 gap-1.5 w-36 mx-auto">
+                    <div></div>
+                    <button onclick="moveMaze('up')"
+                        class="py-2 bg-brand-200 hover:bg-brand-300 rounded-xl font-bold transition active:scale-95 shadow-2xs">⬆️</button>
+                    <div></div>
+                    <button onclick="moveMaze('left')"
+                        class="py-2 bg-brand-200 hover:bg-brand-300 rounded-xl font-bold transition active:scale-95 shadow-2xs">⬅️</button>
+                    <button onclick="moveMaze('down')"
+                        class="py-2 bg-brand-200 hover:bg-brand-300 rounded-xl font-bold transition active:scale-95 shadow-2xs">⬇️</button>
+                    <button onclick="moveMaze('right')"
+                        class="py-2 bg-brand-200 hover:bg-brand-300 rounded-xl font-bold transition active:scale-95 shadow-2xs">➡️</button>
+                </div>
+
+                <div id="maze-status" class="hidden space-y-2">
+                    <p class="text-xs font-extrabold text-emerald-700">🎉 អបអរសាទរ! អ្នកបាននាំ P24 ចេញផុតពី Maze
+                        ស្មុគស្មាញនេះហើយ! 🎀</p>
+                    <button onclick="initMaze()"
+                        class="px-4 py-1.5 bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold rounded-full shadow-md transition">លេងម្តងទៀត
+                        🔄</button>
+                </div>
+            </div>
+
+            <!-- GAME 9: P24 MATCH-3 -->
+            <div id="game-match3" class="game-screen w-full max-w-md hidden space-y-4">
+                <h2 class="text-xl font-extrabold text-brand-800">🍬 ហ្គេមទី៩៖ P24 តម្រៀបរូប 3 ជាប់គ្នា</h2>
+                <p class="text-xs text-brand-600">ចុចផ្លាស់ប្តូររូបដើម្បីទទួលបានពិន្ទុ!</p>
+
+                <div id="match3-grid"
+                    class="w-64 h-64 mx-auto bg-white border border-brand-200 rounded-2xl grid grid-cols-4 gap-1 p-2">
+                </div>
+                <p class="text-xs font-bold text-brand-800">ពិន្ទុ៖ <span id="match3-score">0</span></p>
+            </div>
+
+            <!-- GAME 10: LUCKY SPIN WHEEL -->
+            <div id="game-hidden" class="game-screen w-full max-w-md hidden space-y-4">
+                <h2 class="text-xl font-extrabold text-brand-800">🎡 ហ្គេមទី១០៖ បង្វិលកង់ Challenge P24</h2>
+                <p class="text-xs text-brand-600">ចុចប៊ូតុងបង្វិល ដើម្បីទទួលយក Challenge សប្បាយៗជាមួយ P24 🎀</p>
+
+                <div class="relative w-64 h-64 mx-auto my-2 flex items-center justify-center">
+                    <!-- ទ្រនិចបង្វិល Pointer -->
+                    <div class="absolute -top-3 z-20 text-3xl text-rose-500 drop-shadow-md">▼</div>
+
+                    <!-- ផ្ទះកង់បង្វិល Canvas -->
+                    <div id="spin-wheel-container"
+                        class="w-full h-full rounded-full border-4 border-amber-400 shadow-lg overflow-hidden transition-transform duration-[4000ms] ease-out">
+                        <canvas id="spin-canvas" width="250" height="250" class="w-full h-full"></canvas>
+                    </div>
+                </div>
+
+                <div id="spin-result"
+                    class="text-xs font-extrabold text-emerald-700 hidden bg-emerald-50 border border-emerald-200 py-2 px-4 rounded-xl">
+                </div>
+
+                <div class="text-center pt-1">
+                    <button id="spin-btn" onclick="startLuckySpin()"
+                        class="px-6 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white rounded-full text-xs font-bold transition shadow-md active:scale-95">
+                        🎯 ចាប់ផ្តើមបង្វិល!
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Component Container -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript Files -->
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/products.js"></script>
+
+    <script>
+        function getImagePath(src) {
+            if (!src) return '';
+            return src.startsWith('../') ? src : '../' + src;
+        }
+
+        // 1. GAME SWITCHER LOGIC
+        function switchGame(gameId) {
+            document.querySelectorAll('.game-screen').forEach(el => el.classList.add('hidden'));
+
+            const target = document.getElementById(`game-${gameId}`);
+            if (target) {
+                target.classList.remove('hidden');
+                const gameContainer = target.parentElement;
+                if (gameContainer) {
+                    gameContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+
+            if (gameId === 'memory') startMemoryGame();
+            if (gameId === 'quiz') startQuizGame();
+            if (gameId === 'dressup') initDressUp();
+            if (gameId === 'routine') initRoutine();
+            if (gameId === 'catch') initCatchGame();
+            if (gameId === 'match') startBubbleGame();
+            if (gameId === 'word') initWordGame();
+            if (gameId === 'maze') initMaze();
+            if (gameId === 'match3') initMatch3();
+            if (gameId === 'hidden') initHiddenGame();
+        }
+
+        // 2. MEMORY MATCH GAME (១២ កាត = ៦ គូ)
+        let memoryCards = [], flippedCards = [];
+
+        function startMemoryGame() {
+            const grid = document.getElementById('memory-grid');
+            document.getElementById('memory-status').classList.add('hidden');
+            grid.innerHTML = '';
+
+            if (typeof productsData === 'undefined' || productsData.length < 6) return;
+
+            const selected = [...productsData].sort(() => 0.5 - Math.random()).slice(0, 6);
+            const cardPairs = [...selected, ...selected].sort(() => 0.5 - Math.random());
+
+            cardPairs.forEach((item) => {
+                const imgUrl = getImagePath(item.image);
+                grid.innerHTML += `
+                    <button onclick="flipMemoryCard(this, '${item.id}')" class="h-20 sm:h-24 bg-white border border-brand-300 rounded-2xl shadow-2xs flex items-center justify-center p-1 overflow-hidden transition active:scale-95 hover:border-brand-500">
+                        <span class="card-cover text-lg font-bold text-brand-700">❓</span>
+                        <img src="${imgUrl}" class="card-img hidden w-full h-full object-cover rounded-xl" />
+                    </button>
+                `;
+            });
+            flippedCards = [];
+        }
+
+        function flipMemoryCard(btn, id) {
+            const cover = btn.querySelector('.card-cover');
+            const img = btn.querySelector('.card-img');
+            if (!img.classList.contains('hidden') || flippedCards.length >= 2) return;
+
+            cover.classList.add('hidden');
+            img.classList.remove('hidden');
+            btn.classList.add('bg-brand-100');
+
+            flippedCards.push({ btn, id, cover, img });
+
+            if (flippedCards.length === 2) {
+                if (flippedCards[0].id === flippedCards[1].id) {
+                    flippedCards = [];
+                    if (document.querySelectorAll('#memory-grid .card-img.hidden').length === 0) {
+                        document.getElementById('memory-status').classList.remove('hidden');
+                    }
+                } else {
+                    setTimeout(() => {
+                        flippedCards.forEach(c => {
+                            c.cover.classList.remove('hidden');
+                            c.img.classList.add('hidden');
+                            c.btn.classList.remove('bg-brand-100');
+                        });
+                        flippedCards = [];
+                    }, 800);
+                }
+            }
+        }
+
+        // ==========================================
+        // 2. QUIZ GAME (FIXED & WORKING 100%)
+        // ==========================================
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+        let currentQuizData = [];
+
+        function startQuizGame() {
+            initQuizGame();
+        }
+
+        function initQuizGame() {
+            currentQuizIndex = 0;
+            quizScore = 0;
+
+            if (typeof productsData !== 'undefined' && productsData.length > 0) {
+                currentQuizData = [...productsData].sort(() => Math.random() - 0.5).slice(0, 5);
+            } else {
+                currentQuizData = [
+                    { name: "សេរ៉ូម P24", image: "../assets/images/logo.jpg" }
+                ];
+            }
+            renderQuizQuestion();
+        }
+
+        function renderQuizQuestion() {
+            if (!currentQuizData || currentQuizData.length === 0) return;
+
+            if (currentQuizIndex >= currentQuizData.length) {
+                alert(`🎉 បញ្ចប់ Quiz! អ្នកឆ្លើយត្រូវទទួលបានពិន្ទុសរុប៖ ${quizScore} ពិន្ទុ!`);
+                initQuizGame();
+                return;
+            }
+
+            const current = currentQuizData[currentQuizIndex];
+            const quizSection = document.getElementById('game-quiz');
+            if (!quizSection) return;
+
+            const quizImg = document.getElementById('quiz-product-img');
+            const quizNumEl = document.getElementById('quiz-number');
+
+            if (quizNumEl) {
+                quizNumEl.innerText = `សំណួរទី ${currentQuizIndex + 1}/${currentQuizData.length}`;
+            }
+
+            let rawPath = current.image || '';
+            let finalSrc = '';
+
+            if (typeof getImagePath === 'function') {
+                finalSrc = getImagePath(rawPath);
+            } else {
+                if (rawPath.startsWith('http') || rawPath.startsWith('data:')) {
+                    finalSrc = rawPath;
+                } else if (rawPath.startsWith('../')) {
+                    finalSrc = rawPath;
+                } else if (rawPath.startsWith('assets/')) {
+                    finalSrc = '../' + rawPath;
+                } else {
+                    finalSrc = '../assets/images/products/' + rawPath;
+                }
+            }
+
+            if (quizImg) {
+                quizImg.src = finalSrc;
+                quizImg.alt = current.name || "P24 Product";
+
+                quizImg.onerror = function() {
+                    this.onerror = null;
+                    this.src = '../assets/images/logo.jpg';
+                };
+            }
+
+            let optionsContainer = document.getElementById('quiz-options');
+            if (optionsContainer) {
+                let allNames = (typeof productsData !== 'undefined') ? productsData.map(p => p.name) : ["សេរ៉ូម P24", "ឡេ P24", "ហ្វូម P24", "គ្រីម P24"];
+                let wrongOptions = allNames.filter(n => n !== current.name).sort(() => Math.random() - 0.5).slice(0, 3);
+                let choices = [current.name, ...wrongOptions].sort(() => Math.random() - 0.5);
+
+                optionsContainer.innerHTML = '';
+                choices.forEach(choice => {
+                    const btn = document.createElement('button');
+                    btn.className = 'w-full py-2.5 px-3 bg-white hover:bg-amber-100 border border-brand-200 rounded-xl text-xs font-bold text-brand-800 transition shadow-2xs active:scale-95';
+                    btn.innerText = choice;
+                    btn.onclick = () => {
+                        if (choice === current.name) {
+                            quizScore += 20;
+                            alert("✨ ត្រឹមត្រូវហើយ! (+20 ពិន្ទុ)");
+                        } else {
+                            alert(`❌ ខុសហើយ! ចម្លើយត្រឹមត្រូវគឺ៖ ${current.name}`);
+                        }
+                        currentQuizIndex++;
+                        renderQuizQuestion();
+                    };
+                    optionsContainer.appendChild(btn);
+                });
+            }
+        }
+
+        // ==========================================
+        // 3. P24 TAP TAP FAST GAME (ចុចរើសរូបលឿនដៃ)
+        // ==========================================
+        let tapScore = 0;
+        let tapTimer = 3;
+        let tapTimerInterval = null;
+        let currentTargetProduct = null;
+        let isTapGameRunning = false;
+
+        function initDressUpGame() {
+            initTapGame();
+        }
+
+        function initTapGame() {
+            tapScore = 0;
+            isTapGameRunning = false;
+            clearInterval(tapTimerInterval);
+            document.getElementById('tap-score').innerText = tapScore;
+            document.getElementById('tap-timer').innerText = '3';
+            document.getElementById('tap-target-name').innerText = '- ចុចចាប់ផ្តើម -';
+            document.getElementById('tap-options-grid').innerHTML = '';
+        }
+
+        function startTapGame() {
+            tapScore = 0;
+            isTapGameRunning = true;
+            document.getElementById('tap-score').innerText = tapScore;
+            nextTapRound();
+        }
+
+        function nextTapRound() {
+            if (!isTapGameRunning) return;
+
+            clearInterval(tapTimerInterval);
+            tapTimer = 3;
+            document.getElementById('tap-timer').innerText = tapTimer;
+
+            let list = [];
+            if (typeof productsData !== 'undefined' && productsData.length >= 4) {
+                list = productsData;
+            } else {
+                list = [
+                    { name: "សេរ៉ូម P24", image: "🧴" },
+                    { name: "ឡេការពារកម្ដៅថ្ងៃ P24", image: "☀️" },
+                    { name: "ហ្វូមលាងមុខ P24", image: "🧼" },
+                    { name: "គ្រីមថែស្បែក P24", image: "✨" }
+                ];
+            }
+
+            const shuffled = [...list].sort(() => Math.random() - 0.5).slice(0, 4);
+            currentTargetProduct = shuffled[Math.floor(Math.random() * shuffled.length)];
+
+            document.getElementById('tap-target-name').innerText = currentTargetProduct.name;
+
+            const grid = document.getElementById('tap-options-grid');
+            grid.innerHTML = '';
+
+            shuffled.forEach((prod) => {
+                const imgSrc = getImagePath ? getImagePath(prod.image) : prod.image;
+                const isUrl = imgSrc.startsWith('http') || imgSrc.startsWith('../') || imgSrc.startsWith('assets/');
+
+                grid.innerHTML += `
+                    <button onclick="checkTapAnswer('${prod.name}')"
+                        class="h-24 bg-white border-2 border-brand-200 hover:border-amber-400 rounded-2xl flex items-center justify-center p-2 shadow-2xs active:scale-95 transition overflow-hidden">
+                        ${isUrl ? `<img src="${imgSrc}" class="w-full h-full object-cover rounded-xl pointer-events-none" />` : `<span class="text-3xl">${imgSrc}</span>`}
+                    </button>
+                `;
+            });
+
+            tapTimerInterval = setInterval(() => {
+                tapTimer--;
+                document.getElementById('tap-timer').innerText = tapTimer;
+                if (tapTimer <= 0) {
+                    endTapGame("អស់ពេលហើយ! ⏱️");
+                }
+            }, 1000);
+        }
+
+        function checkTapAnswer(selectedName) {
+            if (!isTapGameRunning) return;
+
+            if (selectedName === currentTargetProduct.name) {
+                tapScore += 10;
+                document.getElementById('tap-score').innerText = tapScore;
+                nextTapRound();
+            } else {
+                endTapGame("ចុចខុសរូបហើយ! ❌");
+            }
+        }
+
+        function endTapGame(reason) {
+            isTapGameRunning = false;
+            clearInterval(tapTimerInterval);
+            alert(`${reason}\n🎉 ពិន្ទុសរុបរបស់អ្នកគឺ៖ ${tapScore} ពិន្ទុ!`);
+        }
+
+        // 4. DRESS UP MY P24
+        function initDressUp() {
+            if (typeof productsData !== 'undefined' && productsData.length > 0) {
+                document.getElementById('dressup-base-img').src = getImagePath(productsData[0].image);
+            }
+        }
+        function toggleDecor(type) {
+            const el = document.getElementById(`dressup-${type}`);
+            if (el) el.classList.toggle('hidden');
+        }
+
+        // 5. SKINCARE ROUTINE GAME
+        let userRoutineOrder = [];
+        let currentRoutineMode = 'morning';
+        let activeRoutineItems = [];
+
+        function initRoutine() {
+            setRoutineMode('morning');
+        }
+
+        function setRoutineMode(mode) {
+            currentRoutineMode = mode;
+            userRoutineOrder = [];
+
+            const fb = document.getElementById('routine-feedback');
+            if (fb) fb.innerText = '';
+
+            if (typeof productsData === 'undefined' || productsData.length === 0) return;
+
+            const cleansers = productsData.filter(p => p.name.includes('ហ្វូម') || p.name.includes('សាប៊ូ') || p.name.includes('Cleanser') || p.name.includes('លាង'));
+            const serums = productsData.filter(p => p.name.includes('សេរ៉ូម') || p.name.includes('Serum') || p.name.includes('Aura') || p.name.includes('Essence'));
+            const sunscreens = productsData.filter(p => p.name.includes('ការពារកម្តៅថ្ងៃ') || p.name.includes('UV') || p.name.includes('Sunscreen') || p.name.includes('Sun'));
+            const nightCreams = productsData.filter(p => p.name.includes('យប់') || p.name.includes('គ្រីម') || p.name.includes('Night') || p.name.includes('Moisturizer') || p.name.includes('Mask') || p.name.includes('ឡេ'));
+
+            const getRandom = (arr, fallbackIdx) => arr.length > 0 ? arr[Math.floor(Math.random() * arr.length)] : productsData[fallbackIdx] || productsData[0];
+
+            const chosenCleanser = getRandom(cleansers, 0);
+            const chosenSerum = getRandom(serums, 1);
+
+            let filteredProducts = [];
+
+            if (mode === 'morning') {
+                const chosenSunscreen = getRandom(sunscreens, 2);
+                filteredProducts = [
+                    { id: 1, name: chosenCleanser.name, img: chosenCleanser.image },
+                    { id: 2, name: chosenSerum.name, img: chosenSerum.image },
+                    { id: 3, name: chosenSunscreen.name, img: chosenSunscreen.image }
+                ];
+            } else {
+                const chosenNightCream = getRandom(nightCreams, 3);
+                filteredProducts = [
+                    { id: 1, name: chosenCleanser.name, img: chosenCleanser.image },
+                    { id: 2, name: chosenSerum.name, img: chosenSerum.image },
+                    { id: 3, name: chosenNightCream.name, img: chosenNightCream.image }
+                ];
+            }
+
+            activeRoutineItems = [...filteredProducts].sort(() => 0.5 - Math.random());
+            renderRoutineUI();
+        }
+
+        function renderRoutineUI() {
+            const list = document.getElementById('routine-list');
+            if (!list) return;
+
+            const isMorning = currentRoutineMode === 'morning';
+
+            let html = `
+                <div class="flex justify-center gap-2 mb-3">
+                    <button onclick="setRoutineMode('morning')" class="px-3.5 py-1.5 rounded-xl text-xs font-extrabold transition ${isMorning ? 'bg-amber-500 text-white shadow-xs' : 'bg-white border border-brand-200 text-brand-800 hover:bg-brand-100'}">
+                        ☀️ ពេលព្រឹក
+                    </button>
+                    <button onclick="setRoutineMode('night')" class="px-3.5 py-1.5 rounded-xl text-xs font-extrabold transition ${!isMorning ? 'bg-indigo-600 text-white shadow-xs' : 'bg-white border border-brand-200 text-brand-800 hover:bg-brand-100'}">
+                        🌙 ពេលយប់
+                    </button>
+                </div>
+                <p class="text-[11px] font-bold text-brand-700 text-center mb-3">
+                    ${isMorning ? '☀️ ចុចជ្រើសរើសផលិតផលខាងក្រោមតាមលំដាប់ Step 1, Step 2, Step 3 សម្រាប់ពេលព្រឹក' : '🌙 ចុចជ្រើសរើសផលិតផលខាងក្រោមតាមលំដាប់ Step 1, Step 2, Step 3 សម្រាប់ពេលយប់'}
+                </p>
+            `;
+
+            html += activeRoutineItems.map((item) => {
+                const selectedIndex = userRoutineOrder.indexOf(item.id);
+                const isSelected = selectedIndex !== -1;
+                const stepText = isSelected ? `Step ${selectedIndex + 1}` : 'ចុចជ្រើសរើស';
+                const cardBg = isSelected ? 'bg-amber-100 border-amber-400' : 'bg-white border-brand-200';
+
+                return `
+                    <div onclick="selectRoutineStep(${item.id})" 
+                        class="p-2.5 ${cardBg} border rounded-2xl text-xs font-bold text-brand-800 flex justify-between items-center gap-3 cursor-pointer hover:bg-brand-100 transition active:scale-98 shadow-2xs">
+                        
+                        <div class="flex items-center gap-3 truncate">
+                            <img src="${getImagePath(item.img)}" class="w-10 h-10 object-cover rounded-xl shrink-0 border border-brand-100 bg-brand-50" />
+                            <span class="truncate text-left">${item.name}</span>
+                        </div>
+
+                        <span class="text-brand-800 bg-white/90 border border-brand-300 px-3 py-1 rounded-full text-[10px] shrink-0 font-extrabold shadow-2xs">
+                            ${stepText}
+                        </span>
+                    </div>
+                `;
+            }).join('');
+
+            list.innerHTML = html;
+        }
+
+        function selectRoutineStep(itemId) {
+            const index = userRoutineOrder.indexOf(itemId);
+            if (index !== -1) {
+                userRoutineOrder.splice(index, 1);
+            } else {
+                if (userRoutineOrder.length < 3) {
+                    userRoutineOrder.push(itemId);
+                }
+            }
+            renderRoutineUI();
+        }
+
+        function checkRoutine() {
+            const fb = document.getElementById('routine-feedback');
+            if (!fb) return;
+
+            if (userRoutineOrder.length < 3) {
+                fb.className = "text-xs font-bold text-rose-600 pt-1";
+                fb.innerText = "⚠️ សូមចុចជ្រើសរើសឱ្យគ្រប់ទាំង ៣ Step ជាមុនសិន!";
+                return;
+            }
+
+            const isCorrect = (userRoutineOrder[0] === 1 && userRoutineOrder[1] === 2 && userRoutineOrder[2] === 3);
+
+            if (isCorrect) {
+                fb.className = "text-xs font-bold text-emerald-700 pt-1";
+                fb.innerText = "✨ ត្រឹមត្រូវឥតខ្ចោះ! អ្នកពូកែខាងថែរក្សាស្បែកខ្លាំងណាស់ 🎀";
+            } else {
+                fb.className = "text-xs font-bold text-rose-600 pt-1";
+                fb.innerText = "❌ មិនទាន់ត្រូវលំដាប់ទេ! សូមចុចដកចេញ ហើយសាកល្បងរៀបម្តងទៀតណា!";
+            }
+        }
+
+        // 6. CATCH PRODUCTS GAME
+        let catchScore = 0;
+        let catchMisses = 0;
+        let basketLeftPercent = 50;
+        let itemTopPx = 0;
+        let itemLeftPercent = 50;
+        let dropSpeed = 0.8;
+        let catchAnimationId = null;
+        let isCatchPlaying = false;
+        let isDraggingBasket = false;
+
+        function initCatchGame() {
+            setupDragEvents();
+            startCatchGame();
+        }
+
+        function startCatchGame() {
+            catchScore = 0;
+            catchMisses = 0;
+            basketLeftPercent = 50;
+            dropSpeed = 0.8;
+            isCatchPlaying = true;
+
+            document.getElementById('catch-score').innerText = catchScore;
+            document.getElementById('catch-lives').innerText = '❤️❤️❤️';
+            document.getElementById('catch-game-over').classList.add('hidden');
+            document.getElementById('catch-item-box').classList.remove('hidden');
+
+            updateBasketPosition();
+            resetFallingItem();
+
+            if (catchAnimationId) cancelAnimationFrame(catchAnimationId);
+            gameLoopCatch();
+        }
+
+        function resetFallingItem() {
+            itemTopPx = 0;
+            itemLeftPercent = Math.floor(Math.random() * 75) + 10;
+
+            const itemBox = document.getElementById('catch-item-box');
+            if (itemBox) {
+                itemBox.style.top = `${itemTopPx}px`;
+                itemBox.style.left = `${itemLeftPercent}%`;
+            }
+
+            if (typeof productsData !== 'undefined' && productsData.length > 0) {
+                const randomProd = productsData[Math.floor(Math.random() * productsData.length)];
+                const imgEl = document.getElementById('catch-img');
+                if (imgEl) imgEl.src = getImagePath(randomProd.image);
+            }
+        }
+
+        function gameLoopCatch() {
+            if (!isCatchPlaying) return;
+
+            const gameArea = document.getElementById('catch-game-area');
+            const itemBox = document.getElementById('catch-item-box');
+            if (!gameArea || !itemBox) return;
+
+            const areaHeight = gameArea.clientHeight;
+            itemTopPx += dropSpeed;
+            itemBox.style.top = `${itemTopPx}px`;
+
+            if (itemTopPx >= areaHeight - 60) {
+                const distance = Math.abs(itemLeftPercent - basketLeftPercent);
+
+                if (distance <= 20) {
+                    catchScore += 1;
+                    document.getElementById('catch-score').innerText = catchScore;
+                    dropSpeed += 0.08;
+                    resetFallingItem();
+                } else if (itemTopPx >= areaHeight - 40) {
+                    catchMisses += 1;
+                    updateLivesUI();
+
+                    if (catchMisses >= 3) {
+                        isCatchPlaying = false;
+                        document.getElementById('catch-final-score').innerText = catchScore;
+                        document.getElementById('catch-game-over').classList.remove('hidden');
+                        cancelAnimationFrame(catchAnimationId);
+                        return;
+                    } else {
+                        resetFallingItem();
+                    }
+                }
+            }
+
+            catchAnimationId = requestAnimationFrame(gameLoopCatch);
+        }
+
+        function setupDragEvents() {
+            const area = document.getElementById('catch-game-area');
+            if (!area) return;
+
+            const handleMove = (clientX) => {
+                if (!isCatchPlaying) return;
+                const rect = area.getBoundingClientRect();
+                const offsetX = clientX - rect.left;
+                let percent = (offsetX / rect.width) * 100;
+                basketLeftPercent = Math.max(8, Math.min(92, percent));
+                updateBasketPosition();
+            };
+
+            area.addEventListener('touchstart', (e) => {
+                isDraggingBasket = true;
+                handleMove(e.touches[0].clientX);
+            }, { passive: true });
+
+            area.addEventListener('touchmove', (e) => {
+                if (isDraggingBasket) handleMove(e.touches[0].clientX);
+            }, { passive: true });
+
+            area.addEventListener('touchend', () => isDraggingBasket = false);
+
+            area.addEventListener('mousedown', (e) => {
+                isDraggingBasket = true;
+                handleMove(e.clientX);
+            });
+
+            area.addEventListener('mousemove', (e) => {
+                if (isDraggingBasket) handleMove(e.clientX);
+            });
+
+            window.addEventListener('mouseup', () => isDraggingBasket = false);
+        }
+
+        function updateBasketPosition() {
+            const basket = document.getElementById('catch-basket');
+            if (basket) basket.style.left = `${basketLeftPercent}%`;
+        }
+
+        function updateLivesUI() {
+            const livesEl = document.getElementById('catch-lives');
+            if (!livesEl) return;
+            if (catchMisses === 1) livesEl.innerText = '❤️❤️🖤';
+            else if (catchMisses === 2) livesEl.innerText = '❤️🖤🖤';
+            else if (catchMisses >= 3) livesEl.innerText = '🖤🖤🖤';
+        }
+
+        // 7. POP THE BUBBLES GAME
+        let bubbleScore = 0;
+        let bubbleTimeLeft = 20;
+        let bubbleTimerInterval = null;
+        let bubbleSpawnInterval = null;
+
+        function startBubbleGame() {
+            bubbleScore = 0;
+            bubbleTimeLeft = 20;
+
+            document.getElementById('bubble-score').innerText = bubbleScore;
+            document.getElementById('bubble-timer').innerText = bubbleTimeLeft;
+            document.getElementById('bubble-game-over').classList.add('hidden');
+
+            const container = document.getElementById('bubble-container');
+            if (container) container.innerHTML = '';
+
+            if (bubbleTimerInterval) clearInterval(bubbleTimerInterval);
+            if (bubbleSpawnInterval) clearInterval(bubbleSpawnInterval);
+
+            bubbleTimerInterval = setInterval(() => {
+                bubbleTimeLeft--;
+                document.getElementById('bubble-timer').innerText = bubbleTimeLeft;
+
+                if (bubbleTimeLeft <= 0) {
+                    endBubbleGame();
+                }
+            }, 1000);
+
+            bubbleSpawnInterval = setInterval(spawnBubble, 500);
+        }
+
+        function spawnBubble() {
+            const container = document.getElementById('bubble-container');
+            if (!container || bubbleTimeLeft <= 0) return;
+
+            const bubble = document.createElement('div');
+            const size = Math.floor(Math.random() * 15) + 48;
+            const leftPercent = Math.floor(Math.random() * 80) + 5;
+
+            let prodImgSrc = '';
+            if (typeof productsData !== 'undefined' && productsData.length > 0) {
+                const randomProd = productsData[Math.floor(Math.random() * productsData.length)];
+                prodImgSrc = getImagePath(randomProd.image);
+            }
+
+            bubble.className = "absolute bottom-0 rounded-full bg-white/90 border-2 border-sky-300 shadow-md p-1 flex items-center justify-center cursor-pointer transition-transform active:scale-125 hover:border-amber-400 select-none overflow-hidden z-10";
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${leftPercent}%`;
+
+            if (prodImgSrc) {
+                bubble.innerHTML = `<img src="${prodImgSrc}" class="w-full h-full object-cover rounded-full pointer-events-none" />`;
+            } else {
+                bubble.innerHTML = `🧴`;
+            }
+
+            let bottomPx = 0;
+            const speed = Math.random() * 1.5 + 1;
+
+            const moveInterval = setInterval(() => {
+                bottomPx += speed;
+                bubble.style.bottom = `${bottomPx}px`;
+
+                if (bottomPx > 220) {
+                    clearInterval(moveInterval);
+                    if (bubble.parentElement) bubble.remove();
+                }
+            }, 16);
+
+            bubble.onclick = () => {
+                bubbleScore += 10;
+                document.getElementById('bubble-score').innerText = bubbleScore;
+                clearInterval(moveInterval);
+
+                bubble.innerHTML = '<span class="text-xl">💥</span>';
+                bubble.style.transform = 'scale(1.2)';
+                bubble.style.opacity = '0';
+                bubble.style.transition = 'all 0.2s ease-out';
+
+                setTimeout(() => bubble.remove(), 200);
+            };
+
+            container.appendChild(bubble);
+        }
+
+        function endBubbleGame() {
+            clearInterval(bubbleTimerInterval);
+            clearInterval(bubbleSpawnInterval);
+
+            document.getElementById('bubble-final-score').innerText = bubbleScore;
+            document.getElementById('bubble-game-over').classList.remove('hidden');
+        }
+
+        // 8. WORD PUZZLE GAME
+        let currentWordObj = null;
+        let wordGuessedChars = [];
+
+        function initWordGame() {
+            const fb = document.getElementById('word-feedback');
+            if (fb) fb.innerText = '';
+
+            if (typeof productsData === 'undefined' || productsData.length === 0) return;
+
+            currentWordObj = productsData[Math.floor(Math.random() * productsData.length)];
+
+            let secretWord = "SERUM";
+            if (currentWordObj.name.toLowerCase().includes('foam') || currentWordObj.name.includes('ហ្វូម')) secretWord = "CLEANSER";
+            else if (currentWordObj.name.toLowerCase().includes('cream') || currentWordObj.name.includes('គ្រីម')) secretWord = "CREAM";
+            else if (currentWordObj.name.toLowerCase().includes('sun') || currentWordObj.name.includes('ការពារ')) secretWord = "SUNSCREEN";
+
+            currentWordObj.targetWord = secretWord;
+            wordGuessedChars = [];
+
+            const imgEl = document.getElementById('word-img');
+            if (imgEl && currentWordObj) imgEl.src = getImagePath(currentWordObj.image);
+
+            renderWordUI();
+        }
+
+        function renderWordUI() {
+            if (!currentWordObj) return;
+
+            const secretWord = currentWordObj.targetWord;
+
+            let displayStr = secretWord.split('').map(char => {
+                return wordGuessedChars.includes(char) ? char : '_';
+            }).join(' ');
+
+            document.getElementById('word-display').innerText = displayStr;
+
+            const alphabet = ['A', 'B', 'C', 'E', 'L', 'M', 'N', 'O', 'R', 'S', 'U', 'W'];
+
+            document.getElementById('word-buttons').innerHTML = alphabet.map(char => {
+                const isUsed = wordGuessedChars.includes(char);
+                return `
+                    <button onclick="checkWordChar('${char}')" ${isUsed ? 'disabled' : ''} 
+                        class="px-3.5 py-1.5 ${isUsed ? 'bg-gray-200 text-gray-400' : 'bg-white hover:bg-brand-100 text-brand-800'} border border-brand-300 rounded-xl text-xs font-extrabold transition active:scale-95 shadow-2xs">
+                        ${char}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function checkWordChar(char) {
+            if (!currentWordObj || wordGuessedChars.includes(char)) return;
+
+            wordGuessedChars.push(char);
+            const secretWord = currentWordObj.targetWord;
+            const fb = document.getElementById('word-feedback');
+
+            renderWordUI();
+
+            const isWin = secretWord.split('').every(c => wordGuessedChars.includes(c));
+
+            if (isWin) {
+                fb.className = "text-xs font-bold text-emerald-700 pt-1";
+                fb.innerText = `✨ ត្រឹមត្រូវឥតខ្ចោះ! ពាក្យពេញគឺ ${secretWord} 🎀`;
+            } else if (!secretWord.includes(char)) {
+                fb.className = "text-xs font-bold text-rose-600 pt-1";
+                fb.innerText = `❌ អក្សរ "${char}" មិនមានក្នុងពាក្យនេះទេ!`;
+            } else {
+                fb.className = "text-xs font-bold text-amber-600 pt-1";
+                fb.innerText = `👍 ត្រូវហើយ! មានអក្សរ "${char}"`;
+            }
+        }
+
+        // ==========================================
+        // 8. MAZE CHALLENGE (ជញ្ជាំងតិចបំផុត ផ្លូវទូលាយលេងស្រួល)
+        // ==========================================
+        let mazePos = 0;
+        const mazeExitPos = 35;
+        const mazeWalls = [8, 15, 20, 22, 27];
+
+        function initMaze() {
+            mazePos = 0;
+            const statusEl = document.getElementById('maze-status');
+            if (statusEl) statusEl.classList.add('hidden');
+            renderMaze();
+        }
+
+        function renderMaze() {
+            const grid = document.getElementById('maze-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            let p24ImgSrc = '';
+            if (typeof productsData !== 'undefined' && productsData.length > 0) {
+                p24ImgSrc = getImagePath(productsData[0].image);
+            }
+
+            for (let i = 0; i < 36; i++) {
+                if (i === mazePos) {
+                    grid.innerHTML += `
+                        <div class="bg-amber-100 border border-amber-300 rounded-lg flex items-center justify-center p-0.5 shadow-2xs">
+                            ${p24ImgSrc ? `<img src="${p24ImgSrc}" class="w-full h-full object-cover rounded-md" />` : '🧴'}
+                        </div>`;
+                } else if (i === mazeExitPos) {
+                    grid.innerHTML += `
+                        <div class="bg-emerald-100 border border-emerald-300 rounded-lg flex items-center justify-center text-xs font-bold">
+                            🏁
+                        </div>`;
+                } else if (mazeWalls.includes(i)) {
+                    grid.innerHTML += `
+                        <div class="bg-slate-300 border border-slate-400 rounded-lg flex items-center justify-center text-[10px] opacity-80">
+                            🧱
+                        </div>`;
+                } else {
+                    grid.innerHTML += `<div class="bg-brand-50/50 border border-brand-100 rounded-lg"></div>`;
+                }
+            }
+        }
+
+        function moveMaze(dir) {
+            let nextPos = mazePos;
+
+            if (dir === 'right' && mazePos % 6 !== 5) nextPos = mazePos + 1;
+            if (dir === 'left' && mazePos % 6 !== 0) nextPos = mazePos - 1;
+            if (dir === 'down' && mazePos < 30) nextPos = mazePos + 6;
+            if (dir === 'up' && mazePos >= 6) nextPos = mazePos - 6;
+
+            if (!mazeWalls.includes(nextPos)) {
+                mazePos = nextPos;
+                renderMaze();
+            }
+
+            if (mazePos === mazeExitPos) {
+                const statusEl = document.getElementById('maze-status');
+                if (statusEl) statusEl.classList.remove('hidden');
+            }
+        }
+
+        // ==========================================
+        // 9. P24 MATCH-3 GAME
+        // ==========================================
+        let match3GridData = [];
+        let match3Score = 0;
+        let dragStartIndex = null;
+        let touchStartX = 0, touchStartY = 0;
+        let isMatch3Processing = false;
+
+        function initMatch3() {
+            match3Score = 0;
+            dragStartIndex = null;
+            isMatch3Processing = false;
+            document.getElementById('match3-score').innerText = match3Score;
+
+            let pImages = [];
+            if (typeof productsData !== 'undefined' && productsData.length > 0) {
+                pImages = productsData.slice(0, 4).map(p => getImagePath(p.image));
+            }
+            if (pImages.length === 0) {
+                pImages = ['🧴', '✨', '🎀', '🌸'];
+            }
+
+            match3GridData = [];
+            for (let i = 0; i < 16; i++) {
+                const randomImg = pImages[Math.floor(Math.random() * pImages.length)];
+                match3GridData.push(randomImg);
+            }
+
+            renderMatch3Grid();
+        }
+
+        function renderMatch3Grid(newIndices = []) {
+            const grid = document.getElementById('match3-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            match3GridData.forEach((imgSrc, idx) => {
+                const isUrl = imgSrc.startsWith('http') || imgSrc.startsWith('../') || imgSrc.startsWith('assets/');
+                const animClass = newIndices.includes(idx) ? 'animate-match3-pop-in' : '';
+
+                grid.innerHTML += `
+                    <div data-index="${idx}" id="match3-cell-${idx}"
+                        onmousedown="handleMatch3DragStart(event, ${idx})"
+                        ontouchstart="handleMatch3TouchStart(event, ${idx})"
+                        ontouchend="handleMatch3TouchEnd(event, ${idx})"
+                        class="match3-item h-14 bg-white border border-brand-200 hover:border-amber-400 rounded-2xl flex items-center justify-center p-1 cursor-grab active:cursor-grabbing transition duration-150 select-none overflow-hidden shadow-2xs ${animClass}">
+                        ${isUrl ? `<img src="${imgSrc}" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />` : `<span class="text-xl pointer-events-none">${imgSrc}</span>`}
+                    </div>
+                `;
+            });
+
+            grid.onmouseup = handleMatch3MouseUp;
+        }
+
+        function handleMatch3DragStart(e, idx) {
+            if (isMatch3Processing) return;
+            dragStartIndex = idx;
+            touchStartX = e.clientX;
+            touchStartY = e.clientY;
+        }
+
+        function handleMatch3MouseUp(e) {
+            if (dragStartIndex === null || isMatch3Processing) return;
+
+            const diffX = e.clientX - touchStartX;
+            const diffY = e.clientY - touchStartY;
+            processMatch3Swipe(diffX, diffY);
+        }
+
+        function handleMatch3TouchStart(e, idx) {
+            if (isMatch3Processing) return;
+            dragStartIndex = idx;
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        }
+
+        function handleMatch3TouchEnd(e, idx) {
+            if (dragStartIndex === null || isMatch3Processing) return;
+
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+
+            const diffX = touchEndX - touchStartX;
+            const diffY = touchEndY - touchStartY;
+
+            processMatch3Swipe(diffX, diffY);
+        }
+
+        function processMatch3Swipe(diffX, diffY) {
+            const minSwipeDistance = 20;
+            let targetIndex = null;
+
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                if (diffX > minSwipeDistance && dragStartIndex % 4 !== 3) {
+                    targetIndex = dragStartIndex + 1;
+                } else if (diffX < -minSwipeDistance && dragStartIndex % 4 !== 0) {
+                    targetIndex = dragStartIndex - 1;
+                }
+            } else {
+                if (diffY > minSwipeDistance && dragStartIndex < 12) {
+                    targetIndex = dragStartIndex + 4;
+                } else if (diffY < -minSwipeDistance && dragStartIndex >= 4) {
+                    targetIndex = dragStartIndex - 4;
+                }
+            }
+
+            if (targetIndex !== null) {
+                swapAndCheckMatch3(dragStartIndex, targetIndex);
+            }
+
+            dragStartIndex = null;
+        }
+
+        function swapAndCheckMatch3(idx1, idx2) {
+            const el1 = document.getElementById(`match3-cell-${idx1}`);
+            const el2 = document.getElementById(`match3-cell-${idx2}`);
+
+            if (el1 && el2) {
+                el1.classList.add('transition-transform', 'duration-200');
+                el2.classList.add('transition-transform', 'duration-200');
+
+                const diffX = el2.offsetLeft - el1.offsetLeft;
+                const diffY = el2.offsetTop - el1.offsetTop;
+
+                el1.style.transform = `translate(${diffX}px, ${diffY}px)`;
+                el2.style.transform = `translate(${-diffX}px, ${-diffY}px)`;
+            }
+
+            setTimeout(() => {
+                if (el1 && el2) {
+                    el1.style.transform = '';
+                    el2.style.transform = '';
+                    el1.classList.remove('transition-transform', 'duration-200');
+                    el2.classList.remove('transition-transform', 'duration-200');
+                }
+
+                const temp = match3GridData[idx1];
+                match3GridData[idx1] = match3GridData[idx2];
+                match3GridData[idx2] = temp;
+
+                renderMatch3Grid();
+
+                const hasMatches = checkAndClearMatch3();
+
+                if (!hasMatches) {
+                    setTimeout(() => {
+                        swapAndCheckMatch3Back(idx1, idx2);
+                    }, 100);
+                }
+            }, 200);
+        }
+
+        function swapAndCheckMatch3Back(idx1, idx2) {
+            const el1 = document.getElementById(`match3-cell-${idx1}`);
+            const el2 = document.getElementById(`match3-cell-${idx2}`);
+
+            if (el1 && el2) {
+                el1.classList.add('transition-transform', 'duration-200');
+                el2.classList.add('transition-transform', 'duration-200');
+
+                const diffX = el2.offsetLeft - el1.offsetLeft;
+                const diffY = el2.offsetTop - el1.offsetTop;
+
+                el1.style.transform = `translate(${diffX}px, ${diffY}px)`;
+                el2.style.transform = `translate(${-diffX}px, ${-diffY}px)`;
+            }
+
+            setTimeout(() => {
+                if (el1 && el2) {
+                    el1.style.transform = '';
+                    el2.style.transform = '';
+                    el1.classList.remove('transition-transform', 'duration-200');
+                    el2.classList.remove('transition-transform', 'duration-200');
+                }
+
+                const rollbackTemp = match3GridData[idx1];
+                match3GridData[idx1] = match3GridData[idx2];
+                match3GridData[idx2] = rollbackTemp;
+                renderMatch3Grid();
+            }, 200);
+        }
+
+        function checkAndClearMatch3() {
+            let matchedIndices = new Set();
+
+            for (let row = 0; row < 4; row++) {
+                for (let col = 0; col < 2; col++) {
+                    let i1 = row * 4 + col;
+                    let i2 = row * 4 + col + 1;
+                    let i3 = row * 4 + col + 2;
+
+                    if (match3GridData[i1] && match3GridData[i1] === match3GridData[i2] && match3GridData[i1] === match3GridData[i3]) {
+                        matchedIndices.add(i1);
+                        matchedIndices.add(i2);
+                        matchedIndices.add(i3);
+                    }
+                }
+            }
+
+            for (let col = 0; col < 4; col++) {
+                for (let row = 0; row < 2; row++) {
+                    let i1 = row * 4 + col;
+                    let i2 = (row + 1) * 4 + col;
+                    let i3 = (row + 2) * 4 + col;
+
+                    if (match3GridData[i1] && match3GridData[i1] === match3GridData[i2] && match3GridData[i1] === match3GridData[i3]) {
+                        matchedIndices.add(i1);
+                        matchedIndices.add(i2);
+                        matchedIndices.add(i3);
+                    }
+                }
+            }
+
+            if (matchedIndices.size > 0) {
+                isMatch3Processing = true;
+
+                match3Score += matchedIndices.size * 10;
+                document.getElementById('match3-score').innerText = match3Score;
+
+                matchedIndices.forEach(idx => {
+                    const el = document.getElementById(`match3-cell-${idx}`);
+                    if (el) {
+                        el.innerHTML = '<span class="text-3xl">💥</span>';
+                        el.classList.add('animate-match3-boom');
+                        el.classList.add('border-rose-400', 'bg-rose-50');
+                    }
+                });
+
+                setTimeout(() => {
+                    let pImages = [];
+                    if (typeof productsData !== 'undefined' && productsData.length > 0) {
+                        pImages = productsData.slice(0, 4).map(p => getImagePath(p.image));
+                    }
+
+                    let newIndicesArray = [];
+                    matchedIndices.forEach(idx => {
+                        match3GridData[idx] = pImages[Math.floor(Math.random() * pImages.length)];
+                        newIndicesArray.push(idx);
+                    });
+
+                    renderMatch3Grid(newIndicesArray);
+
+                    setTimeout(() => {
+                        isMatch3Processing = false;
+                        checkAndClearMatch3();
+                    }, 300);
+
+                }, 500);
+
+                return true;
+            }
+
+            return false;
+        }
+
+        // ==========================================
+        // 10. LUCKY SPIN WHEEL GAME (10 Challenges)
+        // ==========================================
+        let isSpinning = false;
+        let currentRotation = 0;
+
+        const prizes = [
+            { text: "ទិញផលិតផល P24 យ៉ាងតិចឱ្យបាន ៣ មុខ 💖", color: "#F3E9DC" },
+            { text: "ថតរូប Challenge ជាមួយ P24 📸", color: "#E5D0B8" },
+            { text: "ថែស្បែកឱ្យស្អាតដូច CEO 🌸", color: "#FAF6F0" },
+            { text: "រាំ TikTok Challenge ជាមួយ P24 💃", color: "#A97C50" },
+            { text: "ខមិនបេះដូង 💖 លើ TikTok P24 Secrets", color: "#D5B592" },
+            { text: "ធ្វើ Skincare តាមទម្លាប់ CEO P24 🧴", color: "#C6A382" },
+            { text: "ថតវីដេអូ Unbox ផលិតផល P24 📦", color: "#F3E9DC" },
+            { text: "Tag មិត្តភក្តិ ២ នាក់ឱ្យមកលេងហ្គេម P24 👭", color: "#E5D0B8" },
+            { text: "ចែករំលែកគេហទំព័រ P24 ទៅ Story 📲", color: "#D5B592" }
+        ];
+
+        function initHiddenGame() {
+            isSpinning = false;
+            document.getElementById('spin-result').classList.add('hidden');
+            drawSpinWheel();
+        }
+
+        function drawSpinWheel() {
+            const canvas = document.getElementById('spin-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const numPrizes = prizes.length;
+            const arcSize = (2 * Math.PI) / numPrizes;
+
+            ctx.clearRect(0, 0, 250, 250);
+
+            prizes.forEach((prize, index) => {
+                const angle = index * arcSize;
+                ctx.beginPath();
+                ctx.fillStyle = prize.color;
+                ctx.moveTo(125, 125);
+                ctx.arc(125, 125, 120, angle, angle + arcSize);
+                ctx.lineTo(125, 125);
+                ctx.fill();
+                ctx.strokeStyle = '#FFFFFF';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+
+                ctx.save();
+                ctx.translate(125, 125);
+                ctx.rotate(angle + arcSize / 2);
+                ctx.textAlign = "right";
+                ctx.fillStyle = "#4A321B";
+                ctx.font = "bold 9px sans-serif";
+                ctx.fillText(prize.text, 112, 3);
+                ctx.restore();
+            });
+
+            ctx.beginPath();
+            ctx.arc(125, 125, 18, 0, 2 * Math.PI);
+            ctx.fillStyle = "#FFFFFF";
+            ctx.fill();
+            ctx.strokeStyle = "#C6A382";
+            ctx.lineWidth = 3;
+            ctx.stroke();
+        }
+
+        function startLuckySpin() {
+            if (isSpinning) return;
+            isSpinning = true;
+
+            const btn = document.getElementById('spin-btn');
+            const resultEl = document.getElementById('spin-result');
+            if (btn) btn.disabled = true;
+            if (resultEl) resultEl.classList.add('hidden');
+
+            const prizeIndex = Math.floor(Math.random() * prizes.length);
+            const sliceAngle = 360 / prizes.length;
+
+            const targetAngle = 270 - (prizeIndex * sliceAngle + sliceAngle / 2);
+            const extraRounds = 1800;
+
+            const nextRotation = currentRotation + extraRounds + ((targetAngle - (currentRotation % 360) + 360) % 360);
+            currentRotation = nextRotation;
+
+            const container = document.getElementById('spin-wheel-container');
+            if (container) {
+                container.style.transform = `rotate(${currentRotation}deg)`;
+            }
+
+            setTimeout(() => {
+                isSpinning = false;
+                if (btn) btn.disabled = false;
+
+                const wonPrize = prizes[prizeIndex];
+
+                if (resultEl) {
+                    resultEl.innerHTML = `<strong>${wonPrize.text}</strong>`;
+                    resultEl.classList.remove('hidden');
+                }
+            }, 4000);
+        }
+
+        // Init Default
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof productsData !== 'undefined') {
+                initRoutine();
+                startQuizGame();
+            }
+        });
+    </script>
+</body>
+
+</html>

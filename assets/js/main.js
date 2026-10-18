@@ -176,3 +176,11 @@ document.addEventListener('DOMContentLoaded', () => {
         initLoopTypewriter();
     }
 });
+
+// Toggle Mobile Navigation Menu
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu) {
+        menu.classList.toggle('hidden');
+    }
+}
